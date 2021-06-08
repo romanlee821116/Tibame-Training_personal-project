@@ -1430,16 +1430,20 @@
   .newsletter .newsletter-btn input[type='text']{
     border: none;
     height: 30px;
-    width: 250px;
+    width: 70%;
     padding-left: 10px;
   }
 
-  .newsletter .newsletter-btn input[type='submit']{
-    border:none;
+  .newsletter .newsletter-btn a{    
     height: 30px;
+    max-height: 30px;
     width: 60px;
     background-color: #fff;
-    cursor: pointer;
+    border: 1px solid #ccc;
+    color: #333333;
+    padding: 4px 10px;
+    font-size: 14px;
+    vertical-align: center;
   }
 
   .newsletter p{
@@ -2906,12 +2910,16 @@
       margin-bottom: 5px;
     }
 
-    .newsletter .newsletter-btn input[type='submit']{
-      border:none;
+    .newsletter .newsletter-btn a{    
       height: 30px;
+      max-height: 30px;
       width: 60px;
       background-color: #fff;
-      cursor: pointer;
+      border: 1px solid #ccc;
+      color: #333333;
+      padding: 4px 10px;
+      font-size: 14px;
+      vertical-align: center;
     }
 
     .newsletter p{

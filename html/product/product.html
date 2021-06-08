@@ -66,7 +66,8 @@
           $('.row').css({'display':'flex'});
           event.preventDefault();
         })
-      };
+
+       };
     </script>
 
     <title>SOFUBI STUDIO</title>
@@ -93,7 +94,7 @@
         <!-- hamburger -->
         <div class="menulist">
           <input type="checkbox" id='check'>
-          <label for="check"><span></span></label>
+          <label for="check"><span class='menu-span'></span></label>
           <div class="menuhamburger">
             <ul>
               <li><a href="../about/about.html"s>ABOUT</a></li>
@@ -105,15 +106,10 @@
               <li><a href="../cart/cart.html">CART</a></li>
             </ul>
           </div>
-          <!-- <div class="menulist-bg">
-          </div> -->
-          <div class="menulist-img">
-            <img src="#" alt="">
-          </div>
-        </div>
-        <div class="menulist-bgg">
-          testest
-        </div>
+          <div class="menulist-bg">
+              <img src="../pic/menuburger-pic11.png" alt="">              
+          </div>          
+        </div>        
       </div>
       <!-- 第一面=========================================== -->
       <div class="product-banner">
@@ -361,40 +357,40 @@
       </div>
       <!-- footer=========================================== -->
       <div class="footer">
-          <div class="newsletter">
-            <h5>NEWSLETTER</h5>
-            <div class="newsletter-btn">
-              <form class="" action="index.html" method="post">
-                <input type="text" name="" value="" placeholder="Email">
-                <input type="submit" name="" value="Submit">
-              </form>
-            </div>
-            <p>Sign up to our newsletter for special things and receive 10% off your next order</p>
+        <div class="newsletter">
+          <h5>NEWSLETTER</h5>
+          <div class="newsletter-btn">
+            <form class="" action="index.html" method="post">
+              <input type="text" name="" value="" placeholder="Email">
+              <a href="#">Submit</a>
+            </form>
           </div>
-          <div class="site">
-            <h5>Site</h5>
-            <ul>
-              <li><a href="../about/about.html">About</a></li>
-              <li><a href="../news/news.html">News</a></li>
-              <li><a href="../product/product.html">Products</a></li>
-              <li><a href="../artists/artists.html">Artists</a></li>
-            </ul>
-          </div>
-          <div class="order-support">
-            <h5>Order & Support</h5>
-            <ul>
-              <li><a href="#">FAQ</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Terms & Services</a></li>
-              <li><a href="#">Language</a></li>
-            </ul>
-          </div>
-          <div class='warning'>
-            <p>
-              本網站為緯育TibaMe前端設計工程師班第68期學員專題作品，本平台僅供學習、展示之用。參考資源:Pinterest|MightyJaxx|Minifig Builder|DDTStore。若有侵權疑慮，您可以私訊[TibaMe-前端設計工程師養成班]，後續會由專人協助處理。
+          <p>Sign up to our newsletter for special things and receive 10% off your next order</p>
+        </div>
+        <div class="site">
+          <h5>Site</h5>
+          <ul>
+            <li><a href="../about/about.html">About</a></li>
+            <li><a href="../news/news.html">News</a></li>
+            <li><a href="../product/product.html">Products</a></li>
+            <li><a href="../artists/artists.html">Artists</a></li>
+          </ul>
+        </div>
+        <div class="order-support">
+          <h5>Order & Support</h5>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Services</a></li>
+            <li><a href="#"><i class="fas fa-globe-americas"></i>Language</a></li>
+          </ul>
+        </div>
+        <div class='warning'>
+          <p>
+            本網站為緯育TibaMe前端設計工程師班第68期學員專題作品，本平台僅供學習、展示之用。參考資源:Pinterest|MightyJaxx|Minifig Builder|DDTStore。若有侵權疑慮，您可以私訊[TibaMe-前端設計工程師養成班]，後續會由專人協助處理。
               ※ [TibaMe-前端設計工程師養成班]請超連結https://www.facebook.com/webindex/
-            </p>
-          </div>
+          </p>
+        </div>
       </div>
     </div>
     <!-- cartpop===================================== -->
@@ -433,6 +429,8 @@
           i+=1;
       },6000);
 		});
+    
     </script>
+    
   </body>
 </html>

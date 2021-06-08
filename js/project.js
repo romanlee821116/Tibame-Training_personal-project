@@ -519,3 +519,12 @@ document.addEventListener('click', function(e){
   };  
 })
 
+//
+document.addEventListener('click', function(e){
+  if(e.target.classList.contains('menu-span')){
+    console.log('fre')
+    $('div.wrap').toggleClass('freeze');
+    $('body').toggleClass('freeze');
+  }
+})
+
