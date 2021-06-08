@@ -147,19 +147,20 @@ a.hlbtn, button.hlbtn{
   }
 
   .newsletter .newsletter-btn input[type='submit']{
-    border:none;
-    height: 30px;
-    width: 60px;
-    background-color: #fff;
-    cursor: pointer;
+    border:none !important;
+    height: 30px !important;
+    width: 60px !important;
+    background-color: #fff !important;
+    cursor: pointer !important;
   }
 
   .newsletter .newsletter-btn input[type='text']{
-    border: none;
-    height: 30px;
-    width: 250px;
-    padding-left: 10px;
-    margin-bottom: 5px;
+    border: none !important;
+    height: 30px !important;
+    width: 250px !important;
+    padding-left: 10px !important;
+    margin-bottom: 5px !important;
+    border-radius: 0 !important;
   }
 
   .newsletter .newsletter-btn input[type='submit']:hover{

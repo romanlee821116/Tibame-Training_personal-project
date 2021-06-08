@@ -472,7 +472,7 @@ let signin_btn = document.getElementsByClassName('signin-btn')[0];
 document.addEventListener('click', function(e){
   if(e.target.classList.contains('signin-btn')){
     let navbar_signin = $('.fa-search').closest('li').next().find('a');
-    window.alert('Login success')
+    window.alert('Login success');
     $('.fa-user').remove();
     navbar_signin.text('Hi, Roman');
   }
@@ -519,14 +519,3 @@ document.addEventListener('click', function(e){
   };  
 })
 
-// function cart2confirm(){
-//   console.log($('cart2-left input[type=text]').length);
-//   let count = 0;
-//   $('cart2-left input[type=text]').each(function(){
-//     let value = $(this).val();
-//     if(value!=''){
-//       count +=1;
-//     }
-//   });
-//   if(count==6)
-// }
