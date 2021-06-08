@@ -1,0 +1,99 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: #000;
+}
+
+body{
+  width: 1920px;
+  height: 1080px;
+  border: 1px solid black;
+}
+
+.wrap{
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.menu{
+  width: 1200px;
+  height: 120px;
+  display: flex;
+  padding: 18px;
+  align-items: center;
+  border: 1px solid red;
+  position: relative;
+  /* margin-left: 360px;
+  margin-right: 360px; */
+  background-color: white;
+}
+
+.menu ul{
+  position: absolute;
+  margin-left: 200px;
+  /* right: 50px; */
+}
+
+.fa-search{
+  margin-left: 200px;
+}
+
+.menu li{
+  display: inline-block;
+  border: 1px solid #ccc;
+  font-size: 20px;
+  padding: 10px;
+  margin-left: 20px;
+}
+
+.menu img{
+  margin:0 0 0 50px;
+  width: 100px;
+  height: 100px;
+}
+
+.menu a, .menu i{
+  color: #000;
+}
+
+/*圖開門*/
+.banner-door{
+  width: 1200px;
+  font-size: 0;
+}
+
+.leftdoor, .rightdoor{
+  width: 600px;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.banner-door img{
+  width: 100%;
+  transition: 2s;
+}
+
+.moto{
+  font-size: 18px;
+  text-align: center;
+  margin-top: -200px;
+  opacity:0;
+  transition: 2s;
+}
+
+.banner-door:hover .leftdoor img{
+  transform: translateX(-400px);
+  opacity:.3;
+}
+
+.banner-door:hover .rightdoor img{
+  transform: translateX(400px);
+  opacity:.3;
+}
+
+.banner-door:hover .moto{
+  opacity: 1;
+}

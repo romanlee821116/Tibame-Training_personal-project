@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link href="../../css/lego.css" rel="stylesheet">
+    <link href="../../css/innernavbar.css" rel="stylesheet">
+    <link href="../../css/footer.css" rel="stylesheet">
+    <link href="../../css/cartpop.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8c3a8ab95b.js" crossorigin="anonymous"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        let hairstyle = document.getElementById('a-hairstyle');
+        let headstyle = document.getElementById('a-headstyle');
+        let bodystyle = document.getElementById('a-bodystyle');
+        let legstyle = document.getElementById('a-legstyle');
+        let headhight = headstyle.offsetTop + document.documentElement.scrollTop/2;
+        let bodyhight = bodystyle.offsetTop + document.documentElement.scrollTop/2;
+
+        $('.hairitem').click(function(){
+          var url = $(this).attr('src');
+          document.getElementById('hairpic').src = url;
+          document.getElementById('hairpic-confirm').src = url;
+          $('.hairitem').removeClass('choosen');
+          $(this).toggleClass('choosen');
+          $('html, body').scrollTop(840);
+          event.preventDefault();
+        })
+
+        $('.headitem').click(function(){
+          var url = $(this).attr('src');
+          document.getElementById('headpic').src = url;
+          document.getElementById('headpic-confirm').src = url;
+          $('.headitem').removeClass('choosen');
+          $(this).toggleClass('choosen');
+          $('html, body').scrollTop(1290);
+          event.preventDefault();
+        })
+
+        $('.bodyitem').click(function(){
+          var url = $(this).attr('src');
+          document.getElementById('bodypic').src = url;
+          document.getElementById('bodypic-confirm').src = url;
+          $('.bodyitem').removeClass('choosen');
+          $(this).toggleClass('choosen');
+          $('html, body').scrollTop(1640);
+          event.preventDefault();
+        })
+
+        $('.legitem').click(function(){
+          var url = $(this).attr('src');
+          document.getElementById('legpic').src = url;
+          document.getElementById('legpic-confirm').src = url;
+          $('.legitem').removeClass('choosen');
+          $(this).toggleClass('choosen');
+          event.preventDefault();
+        })
+      })
+    </script>
+
+    <script type="text/javascript">
+      function legocontinue(){
+        // console.log('第1'+ document.getElementById('hairpic').src);
+        // console.log('第2'+ document.getElementById('headpic').src);
+        // console.log('第3'+ document.getElementById('bodypic').src);
+        // console.log('第4'+ document.getElementById('legpic').src);
+        //
+        if(document.getElementById('hairpic').src|document.getElementById('headpic').src|document.getElementById('bodypic').src|document.getElementById('legpic').src=='http://127.0.0.1:3000/html/pic/whitebg.png'){
+          if(window.confirm('You have not selected all the parts required for a figure, are you sure you wish to continue?')){
+            $('.legoconfirm').css({'display':'block'});
+            $('html, body').scrollTop(450);
+            $('.lego-whitebg').css({'display':'block'});
+          }
+        }else{
+          $('.legoconfirm').css({'display':'block'});
+          $('html, body').scrollTop(450);
+          $('.lego-whitebg').css({'display':'block'});
+        }
+      }
+
+      function legoback(){
+        $('.legoconfirm').css({'display':'none'});
+        $('.lego-whitebg').css({'display':'none'});
+        event.preventDefault();
+      }
+
+      function undo(){
+        document.getElementById('hairpic').src='../pic/whitebg.png';
+        document.getElementById('headpic').src='../pic/whitebg.png';
+        document.getElementById('bodypic').src='../pic/whitebg.png';
+        document.getElementById('legpic').src='../pic/whitebg.png';
+        $('.hairitem').removeClass('choosen');
+        $('.headitem').removeClass('choosen');
+        $('.bodyitem').removeClass('choosen');
+        $('.legitem').removeClass('choosen');
+      }
+    </script>
+    <title>SOFUBI STUDIO</title>
+  </head>
+  <body>
+    <div class="wrap">
+      <!-- menu=========================== -->
+      <div class="menu">
+        <div class="menu-content">
+          <a href="../index/index.html"><img src="../pic/logo.png" alt="" class='nav-logo'></a>
+          <a href="../index/index.html" class='homebtn'><i class="fas fa-home"></i></a>
+          <ul class="menu-ul">
+            <li><a href="../about/about.html" class='menutitle'>ABOUT</a></li>
+            <li><a href="../product/product.html" class='menutitle'>PRODUCTS</a></li>
+            <li><a href="../lego/lego.html" class='current-page menutitle'>CUSTOMIZE</a></li>
+            <li><a href="../artists/artists.html" class='menutitle'>ARTISTS</a></li>
+            <li><a href="../news/news.html" class='menutitle'>NEWS</a></li>
+            <li><a href="#"><i class="fas fa-search"></i></a></li>
+            <li><a href="../registerlogin/registerlogin.html"><i class="fas fa-user"></i></a></li>
+            <li><a href="#" class='popcartbtn'><i class="fas fa-shopping-cart"></i></a></li>
+          </ul>
+        </div>
+        <!-- hamburger -->
+        <div class="menulist">
+          <input type="checkbox" id='check'>
+          <label for="check"><span></span></label>
+          <div class="menuhamburger">
+            <ul>
+              <li><a href="../about/about.html"s>ABOUT</a></li>
+              <li><a href="../news/news.html">NEWS</a></li>
+              <li><a href="../product/product.html">PRODUCTS</a></li>
+              <li><a href="../lego/lego.html">CUSTOMIZE</a></li>
+              <li><a href="../artists/artists.html">ARTIST</a></li>
+              <li><a href="../registerlogin/registerlogin.html">MEMBER</a></li>
+              <li><a href="../cart/cart.html">CART</a></li>
+            </ul>
+          </div>
+          <div class="menulist-bg">
+          </div>
+          <div class="menulist-img">
+            <img src="#" alt="">
+          </div>
+        </div>
+      </div>
+      <!-- lego product===================================== -->
+      <div class="lego-banner">
+        <!-- <img src="../pic/lego-bg.png" alt=""> -->
+        <h1>START &nbspTHE &nbspJOURNEY</h1>
+      </div>
+      <div class="lego-container">
+        <!-- leftboard -->
+        <div class="lego-container-left">
+          <div class="lego-container-left-hair">
+            <a href="#a-hairstyle"><img src="../pic/lego/hair.PNG" alt=""></a>
+            <p>HAIR</p>
+            <div class="hairstyle">
+              <img src="../pic/whitebg.png" alt="" id='hairpic'>
+            </div>
+          </div>
+
+          <div class="lego-container-left-head">
+            <a href="#a-headstyle"><img src="../pic/lego/head.PNG" alt=""></a>
+            <p>HEAD</p>
+            <div class="headstyle">
+              <img src="../pic/whitebg.png" alt="" id='headpic'>
+            </div>
+          </div>
+
+          <div class="lego-container-left-body">
+            <a href="#a-bodystyle"><img src="../pic/lego/body.PNG" alt=""></a>
+            <p>BODY</p>
+            <div class="bodystyle">
+              <img src="../pic/whitebg.png" alt="" id='bodypic'>
+            </div>
+          </div>
+
+          <div class="lego-container-left-legs">
+            <a href="#a-legstyle"><img src="../pic/lego/legs.PNG" alt=""></a>
+            <p>LEGS</p>
+            <div class="legstyle">
+              <img src="../pic/whitebg.png" alt="" id='legpic'>
+            </div>
+          </div>
+          <div class="lego-container-left-btn">
+            <button type="button" name="button" onclick="undo()" class='hlbtn'>Undo</button>
+            <button type="button" name="button" onclick="legocontinue()" >Continue</button>
+          </div>
+        </div>
+        <!-- rightboard===================================== -->
+        <div class="lego-container-right">
+          <div class="lego-container-right-item" id='a-hairstyle'>
+            <h2>HAIR</h2>
+            <div class="lego-pic">
+              <div>
+                <a href="#"><img src="../pic/lego/hs1.jpg" alt="" class='hairitem'></a>
+                <p>Black</p>
+              </div>
+              <div>
+                <a href="#"><img src="../pic/lego/hs2.JPG" alt="" class='hairitem'></a>
+                <p>Gray</p>
+              </div>
+              <div>
+                <a href="#"><img src="../pic/lego/hs3.jpg" alt="" class='hairitem'></a>
+                <p>Green</p>
+              </div>
+              <div>
+                <a href="#"><img src="../pic/lego/hs4.jpg" alt="" class='hairitem'></a>
+                <p>Brown</p>
+              </div>
+            </div>
+            <div class="lego-pic">
+              <div>
+                <a href="#"><img src="../pic/lego/hs5.jpg" alt="" class='hairitem'></a>
+                <p>Pink</p>
+              </div>
+              <div>
+                <a href="#"><img src="../pic/lego/hs6.jpg" alt="" class='hairitem'></a>
+                <p>Blonde</p>
+              </div>
+              <div>
+                <a href="#"><img src="../pic/lego/hs7.jpg" alt="" class='hairitem'></a>
+                <p>Blonde</p>
+              </div>
+              <div>
+                <a href="#"><img src="../pic/lego/hs8.jpg" alt="" class='hairitem'></a>
+                <p>Dark Brown</p>
+              </div>
+            </div>
+          </div>
+          <!-- head============================================= -->
+          <div class="lego-container-right-item" id='a-headstyle'>
+            <h2>HEAD</h2>
+            <div class="lego-pic">
+              <div>
+                <a href="#"><img src="../pic/lego/hds1.jpg" alt="" class='headitem'></a>
+                <p>Beard</p>
+              </div>
+              <div>
+                <a href="#"><img src="../pic/lego/hds2.jpg" alt="" class='headitem'></a>
+                <p>Glasses<br>(Man)</p>
+              </div>
+              <div>
+                <a href="#"><img src="../pic/lego/hds3.jpg" alt="" class='headitem'></a>
+                <p>Smile</p>
+              </div>
+              <div>
+                <a href="#"><img src="../pic/lego/hds4.jpg" alt="" class='headitem'></a>
+                <p>Love</p>
+              </div>
+            </div>
+            <div class="lego-pic">
+              <div>
+                <a href="#"><img src="../pic/lego/hds5.jpg" alt="" class='headitem'></a>
+                <p>Mask</p>
+              </div>
+              <div>
+                <a href="#"><img src="../pic/lego/hds6.jpg" alt="" class='headitem'></a>
+                <p>Laugh</p>
+              </div>
+              <div>
+                <a href="#"><img src="../pic/lego/hds7.jpg" alt="" class='headitem'></a>
+                <p>Smile</p>
+              </div>
+              <div>
+                <a href="#"><img src="../pic/lego/hds8.jpg" alt="" class='headitem'></a>
+                <p>Glasses<br>(Woman)</p>
+              </div>
+            </div>
+          </div>
+          <!-- body=========== -->
+          <div class="lego-container-right-item"  id='a-bodystyle'>
+            <h2>BODY</h2>
+            <div class="lego-pic">
+              <div>
+                <a href="#"><img src="../pic/lego/bs1.jpg" alt="" class='bodyitem'></a>
+                <p>Worker</p>
+              </div>
+              <div>
+                <a href="#"><img src="../pic/lego/bs2.jpg" alt="" class='bodyitem'></a>
+                <p>Hunter</p>
+              </div>
+              <div>
+                <a href="#"><img src="../pic/lego/bs3.jpg" alt="" class='bodyitem'></a>
+                <p>Suit</p>
+              </div>
+              <div>
+                <a href="#"><img src="../pic/lego/bs4.jpg" alt="" class='bodyitem'></a>
+                <p>Doctor</p>
+              </div>
+            </div>
+            <div class="lego-pic">
+              <div>
+                <a href="#"><img src="../pic/lego/bs5.jpg" alt="" class='bodyitem'></a>
+                <p>Snowman</p>
+              </div>
+              <div>
+                <a href="#"><img src="../pic/lego/bs6.jpg" alt="" class='bodyitem'></a>
+                <p>Rocket</p>
+              </div>
+              <div>
+                <a href="#"><img src="../pic/lego/bs7.jpg" alt="" class='bodyitem'></a>
+                <p>Fitting</p>
+              </div>
+              <div>
+                <a href="#"><img src="../pic/lego/bs8.jpg" alt="" class='bodyitem'></a>
+                <p>Hoodie</p>
+              </div>
+            </div>
+          </div>
+          <!-- leg============ -->
+          <div class="lego-container-right-item"  id='a-legstyle'>
+            <h2>LEGS</h2>
+            <div class="lego-pic">
+              <div>
+                <a href="#"><img src="../pic/lego/ls1.PNG" alt="" class='legitem'></a>
+                <p>Jeans</p>
+              </div>
+              <div>
+                <a href="#"><img src="../pic/lego/ls2.PNG" alt="" class='legitem'></a>
+                <p>Gray</p>
+              </div>
+              <div>
+                <a href="#"><img src="../pic/lego/ls3.PNG" alt="" class='legitem'></a>
+                <p>Blue</p>
+              </div>
+              <div>
+                <a href="#"><img src="../pic/lego/ls4.PNG" alt="" class='legitem'></a>
+                <p>Red</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- legoconfirm====================================================== -->
+        <div class="legoconfirm">
+          <i class="far fa-check-circle"></i>
+          <h3>Your Figure Is Completed!</h3>
+          <!--  -->
+          <div class="legoconfirm-list">
+            <div class="legoconfirm-item confirm-hair">
+              <a href="#"><img src="../pic/lego/hair.PNG" alt=""></a>
+              <p>HAIR</p>
+              <div class="legoconfirm-choosed">
+                <img src="../pic/whitebg.png" alt="" id='hairpic-confirm'>
+              </div>
+            </div>
+            <!--  -->
+            <div class="legoconfirm-item confirm-head">
+              <a href="#"><img src="../pic/lego/head.PNG" alt=""></a>
+              <p>HEAD</p>
+              <div class="legoconfirm-choosed">
+                <img src="../pic/whitebg.png" alt="" id='headpic-confirm'>
+              </div>
+            </div>
+            <!--  -->
+            <div class="legoconfirm-item confirm-body">
+              <a href="#"><img src="../pic/lego/body.PNG" alt=""></a>
+              <p>BODY</p>
+              <div class="legoconfirm-choosed">
+                <img src="../pic/whitebg.png" alt="" id='bodypic-confirm'>
+              </div>
+            </div>
+            <!--  -->
+            <div class="legoconfirm-item confirm-legs">
+              <a href="#"><img src="../pic/lego/legs.PNG" alt=""></a>
+              <p>LEGS</p>
+              <div class="legoconfirm-choosed">
+                <img src="../pic/whitebg.png" alt="" id='legpic-confirm'>
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <button type="button" name="button"onclick='legoback()' class='hlbtn'>Back</button>
+          <button type="button" name="button" id='lego_add_cart'>Add To Cart</button>
+        </div>
+      </div>
+      <!-- footer=========================================== -->
+      <div class="footer">
+          <div class="newsletter">
+            <h5>NEWSLETTER</h5>
+            <div class="newsletter-btn">
+              <form class="" action="index.html" method="post">
+                <input type="text" name="" value="" placeholder="Email">
+                <input type="submit" name="" value="Submit">
+              </form>
+            </div>
+            <p>Sign up to our newsletter for special things and receive 10% off your next order</p>
+          </div>
+          <div class="site">
+            <h5>Site</h5>
+            <ul>
+              <li><a href="../about/about.html">About</a></li>
+              <li><a href="../news/news.html">News</a></li>
+              <li><a href="../product/product.html">Products</a></li>
+              <li><a href="../artists/artists.html">Artists</a></li>
+            </ul>
+          </div>
+          <div class="order-support">
+            <h5>Order & Support</h5>
+            <ul>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms & Services</a></li>
+              <li><a href="#">Language</a></li>
+            </ul>
+          </div>
+          <div class='warning'>
+            <p>
+              本網站為緯育TibaMe前端設計工程師班第68期學員專題作品，本平台僅供學習、展示之用。參考資源:Pinterest|MightyJaxx|Minifig Builder|DDTStore。若有侵權疑慮，您可以私訊[TibaMe-前端設計工程師養成班]，後續會由專人協助處理。
+              ※ [TibaMe-前端設計工程師養成班]請超連結https://www.facebook.com/webindex/
+            </p>
+          </div>
+      </div>
+            <!-- whiteBG -->
+      <div class="lego-whitebg">
+      </div>
+    </div>
+    <!-- wrap -->
+    <!-- cartpop===================================== -->
+    <div class="cartpop">
+      <div class="cartpop-close">
+        <button type="button" name="button" class='cartpop-close-btn'><i class="fas fa-times"></i></button>
+      </div>
+      <div class="cartpop-header">
+        <h1>Your Order</h1>
+      </div>
+    <!-- cartpop-item -->
+      <div class="cartpop-itemlist" id='cartpop-itemlist'>
+
+      </div>
+
+      <div class="cartpop-checkout">
+        <a href="../cart/cart.html">CHECKOUT</a>
+        <a>$</a>
+        <a href="../cart/cart.html" class='cartpop-total'>0</a>
+      </div>
+    </div>
+    <!-- cartpopitem-end=========================== -->
+    <script type="text/javascript" src="../../js/project.js"></script>
+  </body>
+</html>

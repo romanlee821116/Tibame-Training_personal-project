@@ -1,0 +1,142 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: #000;
+}
+
+body{
+  width: 1920px;
+  height: 1080px;
+  border: 1px solid black;
+}
+
+.wrap{
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.menu{
+  width: 1200px;
+  height: 120px;
+  display: flex;
+  padding: 18px;
+  align-items: center;
+  border: 1px solid red;
+  position: relative;
+  /* margin-left: 360px;
+  margin-right: 360px; */
+  background-color: #333333;
+}
+
+.menu ul{
+  position: absolute;
+  margin-left: 200px;
+  /* right: 50px; */
+}
+
+.fa-search{
+  margin-left: 200px;
+}
+
+.menu li{
+  display: inline-block;
+  border: 1px solid #ccc;
+  font-size: 20px;
+  padding: 10px;
+  margin-left: 20px;
+}
+
+.menu img{
+  margin:0 0 0 50px;
+  width: 100px;
+  height: 100px;
+}
+
+.menu a, .menu i{
+  color: #fff;
+}
+
+/*圖片文字區域*/
+
+.img-text{
+  width: 1200px;
+  height: 960px;
+  background-color: #333333;
+  border: 1px solid purple;
+  /* margin-left: 360px;
+  margin-right: 360px; */
+  position: relative;
+}
+
+.img-text .img{
+  width: 400px;
+  margin-top: 50px;
+  overflow: hidden;
+  border: 1px solid red;
+  margin-left: 100px;
+}
+
+.img-text .img img{
+  width: 100%;
+  height: auto;
+  transition: 1s;
+}
+
+.img-text .img img:hover{
+  transform: scale(1.1);
+}
+
+.img-text .txt{
+  border: 1px solid blue;
+  color: #fa9800;
+  position: absolute;
+  left: 390px;
+  top: 340px;
+}
+
+.img-text .txt h1{
+  font-size: 70px;
+  color: #fa9800;
+}
+
+.img-text .txt p{
+  border: 1px solid green;
+  width: 700px;
+  font-size: 24px;
+  line-height: 40px;
+  color: #fa9800;
+  margin-left: 60px;
+  margin-top: 30px;
+}
+
+.img-text .moreabout{
+  width: 700px;
+  font-size: 24px;
+  color: #fa9800;
+  border: 1px solid red;
+  text-align: right;
+  display: inline-block;
+  margin-top: 20px;
+  position: relative;
+  transition: .3s;
+}
+
+.img-text .moreabout:before{
+  content:'';
+  display: inline-block;
+  color: #fa9800;
+  width: 100px;
+  height: 20px;
+  border-top: 2px solid #fa9800;
+  position: absolute;
+  left: 30%;
+  top: 12px;
+}
+
+.img-text .moreabout:hover{
+  transform: translateY(-5px);
+  color: rgba(250,0,0,.8);
+}

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <script src="https://kit.fontawesome.com/8c3a8ab95b.js" crossorigin="anonymous"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link href="hometotal.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script type="text/javascript">
+
+    var header_active = function(){
+    // 取得使用者滑了多少 px
+    var scroll_top = $(window).scrollTop();
+    // 將 scroll_top 數值放到 p.-pos 內容
+    $("p.-pos").html(scroll_top);
+    if(scroll_top >= 950){
+      $(".menu-content").addClass("on");
+    }else{
+      $(".menu-content").removeClass("on");
+    }
+    };
+
+    $(function(){
+    // 第三步：偵測頁面滑動時會觸發
+    $(window).scroll(function(){
+      header_active();
+    });
+    });
+  </script>
+  <script type="text/javascript">
+  var lego_active = function(){
+    var scroll_num =$(window).scrollTop();
+    if(scroll_num>=3300){
+      $(".lego-pic-left").addclass('moveright');
+      $(".lego-pic-right").addclass('moveleft');
+    }else{
+      $(".lego-pic-left").removeclass('moveright');
+      $(".lego-pic-right").removeclass('moveleft');
+    }
+  }
+
+  $(function(){
+  // 第三步：偵測頁面滑動時會觸發
+  $(window).scroll(function(){
+    lego_active();
+  });
+  });
+  </script>
+</head>
+<body>
+  <div class="wrap">
+    <!-- 第一面開始================================================= -->
+    <div class="firstpage">
+      <!--影片部分-->
+      <div class="video">
+        <video src="Nakamura moe.mp4" autoplay loop muted>
+        </video>
+        <div class="slogan">
+          <h1>SOFUBI STUDIO</h1>
+        </div>
+      <!--側邊漢堡選單-->
+      <div class="buy">
+        <a href="#"><h1>BUY NOW</h1></a>
+        </div>
+        <div class="menulist">
+          <input type="checkbox" id='check'>
+          <label for="check"><span></span></label>
+          <div class="menuhamburger">
+            <ul>
+              <li><a href="#">ABOUT US</a></li>
+              <li><a href="#">NEWS</a></li>
+              <li><a href="#">ARTIST</a></li>
+              <li><a href="#">PRODUCTS</a></li>
+              <li><a href="#">CONTACT</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+      <!-- 第二面開始================================================= -->
+      <!--上方menu====================================================== -->
+    <div class="menu">
+      <div class="menu-content">
+        <img src="logo.PNG" alt="">
+        <ul class='menu-ul'>
+          <li><a href="#">ABOUT</a></li>
+          <li><a href="#">PRODUCTS</a></li>
+          <li><a href="#">ARTISTS</a></li>
+          <li><a href="#">CONTACT</a></li>
+          <li><input type="text" name="request" value="" class='menu-request'></li>
+          <li><a href="#"><i class="fas fa-search"></i></a></li>
+          <li><a href="#"><i class="fas fa-user"></i></a></li>
+          <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- 文字 -->
+    <div class="about">
+      <div class="about-img-text">
+        <div class='img'>
+          <!-- <p class="-pos">fdsafds</p> -->
+          <img src="4754_2.jpg" alt="">
+        </div>
+        <item class='txt'>
+          <h1>FIGURE MADE WITH PASSION</h1>
+          <p>SOFUBI STUDIO is a global collective of creative types,
+            engineers & manufacturing wizards that love sharing the fun of character & toy production
+            as we journey together towards your goals & ambitions.</p>
+          <a href="#" class='moreabout'>Learn More About SOFUBI STUDIO</a>
+        </item>
+      </div>
+    </div>
+    <!-- 第三面開始=================================================== -->
+    <div class="banner-door">
+        <div class="leftdoor">
+          <img src="1.jpg" alt="">
+        </div>
+        <div class="rightdoor">
+          <img src="2.jpg" alt="">
+        </div>
+
+        <div class="moto">
+          <pre>“History is history; now is now. Forget about history. Now is happy.”
+                                                          - Takashi Murakami
+          </pre>
+        </div>
+    </div>
+    <!-- 第四面開始================================================== -->
+    <div class="news">
+        <div class="news-title">
+            <h1>NEWS</h1>
+            <input type="button" name="" value="VIEW ALL" class='news-btn'>
+        </div>
+        <div class="news-content">
+            <div class="news-content-1">
+              <img src="EXJ8_1OUMAE8ZWm.jpg" alt="">
+              <item>
+                <h3>2021.04.14</h3>
+                <p>JOAN CORNELLÀ’S "MY LIFE IS POINTLESS" EXHIBITION IN COLLABORATION WITH SOTHEBY'S</p>
+                <a href="#"><i class="far fa-arrow-alt-circle-right"></i></a>
+              </item>
+            </div>
+            <div class="news-content-2">
+              <img src="news.png" alt="">
+              <item>
+                <h3>2021.04.14</h3>
+                <p>JOAN CORNELLÀ’S "MY LIFE IS POINTLESS" EXHIBITION IN COLLABORATION WITH SOTHEBY'S</p>
+                <a href="#"><i class="far fa-arrow-alt-circle-right"></i></a>
+              </item>
+            </div>
+            <div class="news-content-3">
+              <img src="Moe-Nakamura.png" alt="">
+              <item>
+                <h3>2021.04.14</h3>
+                <p>JOAN CORNELLÀ’S "MY LIFE IS POINTLESS" EXHIBITION IN COLLABORATION WITH SOTHEBY'S</p>
+                <a href="#"><i class="far fa-arrow-alt-circle-right"></i></a>
+              </item>
+            </div>
+        </div>
+
+        <!--波浪-->
+        <div class="wave-top-l"></div>
+        <div class="wave-top-r"></div>
+        <div class="wave-bot-l"></div>
+        <div class="wave-bot-r"></div>
+
+        <div class="newslogo">
+          NEWS
+        </div>
+        <div >
+        </div>
+      </div>
+      <!-- <p class="-pos">fdsafds</p> -->
+      <!-- 第五面開始=============================================== -->
+      <div class="lego">
+        <img src="lego_bg.PNG" alt="" class="lego-bg">
+        <h1>MAKE YOU OWN FIGURE!</h1>
+        <input type="button" name="" value="START" class='lego-btn'>
+        <h2>LEGO</h2>
+        <img src="lego1.png" alt="" class='lego-pic-left'>
+        <img src="lego2.png" alt="" class='lego-pic-right'>
+      </div>
+      <!-- 第六面開始=============================================== -->
+      <div class="product">
+        <div class="product-item">
+          <div>
+            <div class="product-pic">
+              <img src="p1.jpg" alt="">
+            </div>
+            <h5>1000Tentacles - Tiger Bill</h5>
+            <p>$4,980</p>
+          </div>
+          <div>
+            <div class="product-pic">
+              <img src="p9.jpg" alt="">
+            </div>
+            <h5>Fool Paradise - SUPER Recall</h5>
+            <p>$9,400</p>
+          </div>
+          <div>
+            <div class="product-pic">
+              <img src="p8.jpg" alt="">
+            </div>
+            <h5>Satoru KOIZUMI - Wolf</h5>
+            <p>$160,000</p>
+          </div>
+          <div>
+            <div class="product-pic">
+              <img src="p5.jpg" alt="">
+            </div>
+            <h5>Shoko Nakazawa - Seedlas</h5>
+            <p>$1,800</p>
+          </div>
+        </div>
+
+          <div class="product-btn">
+            <input type="button" name="" value="VIEW ALL PRODUCTS">
+          </div>
+          <div class="product-logo">
+              <h1>NEW ARRIVALS</h1>
+          </div>
+      </div>
+      <!-- 第七八面開始======================================= -->
+      <div class="artist">
+        <div class='artist1'>
+          <img src="SHOKO.jpg" alt="">
+        </div>
+        <div class="artist2">
+          <img src="LoongKaShing_1.jpg" alt="">
+        </div>
+        <div class="artist3">
+          <img src="hana.jpg" alt="">
+        </div>
+        <div class="artist-content">
+          <p>From concept to object - We create artist editions that tell stories about the artists shaping a new wave of the art world.
+          </p>
+          <button type="button" name="button">VIEW ALL ARTISTS</button>
+        </div>
+        <div class="artist-logo">
+          <h1>ARTISTS</h1>
+        </div>
+      </div>
+      <!-- shopinfo -->
+      <div class="shopinfo">
+          <div class="shopinfo-address">
+            <div>
+              <h3>SOFUBI STUDIO</h3>
+              <p>104台北市中山區南京東路三段219號4樓</p>
+              <p>11:00 A.M - 21:00 P.M</p>
+              <p>03-25313596</p>
+              <p>info@sofubistuidio.com</p>
+            </div>
+
+            <div class='engaddress'>
+              <h3></h3>
+              <p>4F., No. 219, Sec. 3, Nanjing E. Rd., Zhongshan Dist., Taipei City 104, Taiwan (R.O.C.)</p>
+              <p>11:00 A.M - 21:00 P.M</p>
+              <p>03-25313596</p>
+              <p>info@sofubistuidio.com</p>
+            </div>
+          </div>
+          <div class="shopinfo-map">
+            <a href="#"><img src="map.png" alt=""></a>
+          </div>
+      </div>
+
+      <!-- footer -->
+      <div class="footer">
+        <div class="newsletter">
+          <h5>NEWSLETTER</h5>
+          <div class="newsletter-btn">
+            <form class="" action="index.html" method="post">
+              <input type="text" name="" value="" placeholder="Email">
+              <input type="submit" name="" value="Submit">
+            </form>
+          </div>
+          <p>Sign up to our newsletter for special things and receive 10% off your next order</p>
+        </div>
+        <div class="site">
+          <h5>Site</h5>
+          <ul>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">NEWS</a></li>
+            <li><a href="#">PRODUCTS</a></li>
+            <li><a href="#">ARTISTS</a></li>
+          </ul>
+        </div>
+        <div class="order-support">
+          <h5>Order & Support</h5>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Services</a></li>
+            <li><a href="#">Language</a></li>
+          </ul>
+        </div>
+        <div class="backtop">
+          <a href="#"><i class="fas fa-angle-double-up the_block animate__animated animate__bounce animate__infinite"></i></a>
+        </div>
+      </div>
+<!-- wrap -->
+    </div>
+</body>
+</html>

@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: #000;
+  font-family: noto sans jp;
+}
+
+body{
+  background-color: #000;
+  font-size: 16px;
+}
+
+.wrap{
+  width: 100%;
+  margin: 0 auto;
+  background-color: #fff;
+  overflow: hidden;
+  background: url('./../html/pic/image.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.ca-container{
+  width: 75%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-bottom: 50px;
+  display: flex;
+  background-color: rgba(255,255,255,.6);
+}
+/* container =========================*/
+.ca-title{
+  width: 75%;
+  max-width: 1000px;
+  text-align: center;
+  margin: 0 auto;
+  background-color: rgba(255,255,255,.6);
+  padding: 50px 0 0 0;
+}
+
+.ca-title h1{
+  font-size: 50px;
+  color: #333333;
+}
+
+.fast-login{
+  width: 45%;
+  padding: 60px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.or-block{
+  display: none;
+}
+
+.fast-login-btn button{
+  display: block;
+  height:50px;
+  width: 200%;
+  max-width: 250px;
+  margin-bottom: 40px;
+  cursor: pointer;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  background-color: white;
+  text-align: left;
+  padding: 5px 20px;
+  position: relative;
+}
+
+.fast-login-btn button+button{
+  background-color: #3b5998;
+  color: white;
+}
+
+.fast-login-btn button:hover{
+  background-color: #333333;
+  color: #fa9800;
+}
+
+.fast-login-btn i{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+  font-size: 25px;
+}
+
+.fa-google{
+  color: red;
+  background-color: transparent;
+}
+
+.fa-facebook{
+  color:white;
+}
+
+.ca-txt{
+  width: 55%;
+  padding: 40px;
+}
+
+.ca-txt>div{
+  margin-bottom: 20px;
+}
+
+.ca-txt p{
+  /* margin-bottom: 3px; */
+}
+
+.ca-container input{
+  width:80%;
+  height: 30px;
+  padding-left: 10px;
+}
+
+.ca-txt-name{
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+.ca-txt-name input{
+  width:45%;
+  height: 30px;
+  padding-left: 10px;
+}
+
+.ca-txt-advice input{
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+}
+
+.ca-txt-advice label{
+  margin-right: 20px;
+}
+
+.ca-txt-policy {
+  font-size: 14px;
+}
+
+.ca-txt-policy input{
+  width: 15px;
+  height: 15px;
+  margin: 30px 10px 40px 0;
+}
+
+.ca-txt-btn button{
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: #333333;
+  width: 120px;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: .3s;
+  margin-right: 20px;
+}
+
+.ca-txt-btn button:hover{
+  background-color: #333333;
+  color: #fa9800;
+}
+
+
+@media screen and (max-width: 1000px){
+  .ca-title{
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    background-color: rgba(255,255,255,.6);
+    padding: 50px 0 0 0;
+  }
+  .ca-container{
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+    display: flex;
+    background-color: rgba(255,255,255,.6);
+  }
+
+  @media screen and (max-width: 767px){
+    .ca-container{
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding-bottom: 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: rgba(255,255,255,.6);
+      position: relative;
+    }
+    .or-block{
+      display: block;
+      width:50%;
+    }
+    .or{
+      position: relative;
+      text-align: center;
+      width:100%;
+      font-size: 12px;
+    }
+
+    .or::before{
+      content: "";
+      position: absolute;
+      width: 15vw;
+      height: 10px;
+      border-bottom: 1px solid #000;
+      top: 0;
+      left: 0;
+    }
+
+    .or::after{
+      content: "";
+      position: absolute;
+      width: 15vw;
+      height: 10px;
+      border-bottom: 1px solid #000;
+      top: 0;
+      right: 0;
+    }
+    .fast-login{
+      width: 60%;
+      padding: 60px 10px 10px 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 auto;
+    }
+
+    .fast-login-btn button{
+      /* display: block; */
+      height:50px;
+      width: 50vw;
+      max-width: 250px;
+      min-width: 230px;
+      margin-bottom: 40px;
+      cursor: pointer;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      background-color: white;
+      text-align: left;
+      padding: 5px 20px;
+      position: relative;
+    }
+
+    .fast-login-btn button+button{
+      background-color: #3b5998;
+      color: white;
+    }
+
+    .fast-login-btn button:hover{
+      background-color: #333333;
+      color: #fa9800;
+    }
+
+    .fast-login-btn i{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0px;
+      font-size: 25px;
+      margin: 0 5px;
+    }
+
+    .fa-google{
+      color: red;
+      background-color: transparent;
+    }
+
+    .fa-facebook{
+      color:white;
+    }
+
+    .ca-txt{
+      width: 80%;
+      padding: 10px;
+    }
+
+    .ca-txt>div{
+      width: 80%;
+      margin: 0 auto 20px auto;
+    }
+
+    .ca-container input{
+      width:100%;
+      height: 30px;
+      padding-left: 3px;
+      font-size: 12px;
+    }
+
+    .ca-txt>p{
+      width: 80%;
+      margin: 0 auto;
+    }
+    .ca-txt-name{
+      width: 80%;
+      display: flex;
+      justify-content: space-between;
+    }
+    .ca-txt-name input{
+      width:49.5%;
+    }
+
+    .ca-txt-advice input{
+      width: 15px;
+      height: 15px;
+      margin-right: 10px;
+    }
+
+    .ca-txt-advice label{
+      margin-right: 0px;
+      margin-top: 5px;
+      display: block;
+    }
+
+    .ca-txt-policy {
+      font-size: 14px;
+    }
+
+    .ca-txt-policy input{
+      width: 15px;
+      height: 15px;
+      margin: 30px 10px 40px 0;
+    }
+
+    .ca-txt-btn{
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .ca-txt-btn button{
+      background-color: #fff;
+      border: 1px solid #ccc;
+      color: #333333;
+      width: 80px;
+      padding: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: .3s;
+    }
+
+    .ca-txt-btn button:hover{
+      background-color: #333333;
+      color: #fa9800;
+    }
+
+
+
+  }
+}

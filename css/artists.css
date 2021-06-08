@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: #000;
+  font-family: noto sans jp;
+}
+
+body{
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+}
+
+.wrap{
+  width: 100%;
+  margin: 0 auto;
+  background: linear-gradient(90deg, #fff 50%, #000 50%);
+  position: relative;
+}
+
+/* Artist===================================== */
+.artist-sofubi{
+  width: 100%;
+  position: relative;
+  /* border: 1px solid red; */
+}
+
+.artist-sofubi .banner{
+  width:  100%;
+  height: 400px;
+  overflow: hidden;
+  background-image: url('./../html/pic/maxresdefault.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.artist-list{
+  padding: 5px 50px;
+  position: absolute;
+  top: 300px;
+  left: 0;
+  z-index: 500;
+}
+
+.artist-list a{
+  font-size: 14px;
+  color: #4F4F4F;
+}
+
+.artist-list a:hover{
+  color: #fa9800;
+}
+
+.buy-artist{
+  width: 100%;
+  padding: 50px 0px 100px;
+  background: linear-gradient(90deg, #fff 50%, #000 50%);
+}
+
+.buy-artist a{
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: #333333;
+  width: 150px;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: .3s;
+  display: block;
+  margin: 0 auto;
+}
+
+.buy-artist a:hover{
+  background-color: #333333;
+  color: #fa9800;
+}
+
+.twentytwenty-container{
+  max-width: 1175px;
+  /* border: 1px solid blue; */
+  margin: 0 auto;
+}
+
+.rwdbg{
+  width: 100%;
+  height: 100%;
+  background-color: #fa0;
+  /* border: 1px solid blue; */
+  display: none;
+}
+
+@media screen and (max-width: 575px){
+  .artist-sofubi .banner{
+    width:  100%;
+    height: 200px;
+    overflow: hidden;
+    background-image: url('./../html/pic/maxresdefault.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .twentytwenty-container{
+    display: none;
+  }
+
+  .rwdbg{
+    padding-top: 80px;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    /* border: 1px solid blue; */
+    display: block;
+  }
+  .rwdbg img{
+    width: 100%;
+    height: auto;
+  }
+
+  .buy-artist{
+    width: 100%;
+    padding: 50px 0px 100px;
+    background: linear-gradient(90deg, #000 50%, #000 50%);
+  }
+
+  .artist-list{
+    padding: 2px 10px;
+    position: absolute;
+    top: 200px;
+    left: 0;
+    z-index: 500;
+    /* border: 1px solid red; */
+  }
+
+  .artist-list a{
+    font-size: 12px;
+    color: #fff;
+  }
+
+  .artist-list a:hover{
+    color: #fff;
+  }
+
+}

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>SOFUBI STUDIO</title>
+    <script src="https://kit.fontawesome.com/8c3a8ab95b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="../../css/cart3.css" rel="stylesheet">
+    <link href="../../css/cart2.css" rel="stylesheet">
+    <link href="../../css/cartpop.css" rel="stylesheet">
+    <link href="../../css/innernavbar.css" rel="stylesheet">
+    <link href="../../css/footer.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript">
+     function paymentconfirm(){
+
+       if(window.confirm('Confirm payment?')){
+         let count = 0
+         $('.cart3-payment-credit input').each(function(){
+           var value = $(this).val();
+           if(value!=''){
+             count +=1 ;
+           }
+         })
+         if(count == 5){
+           $('.cart3-orderconfirm').css({'display':'block'});
+           $('.bgblock').css({'display':'block'});
+           document.documentElement.scrollTop = 0;
+         }else{
+           window.alert('Please complete all required fields');
+           $('.cart3-payment-credit input').each(function(){
+             if($(this).val() == ''){
+               $(this).css({'border' : '1.5px solid red'});
+             }
+           })
+          }
+         }
+       }
+
+
+
+    </script>
+  </head>
+  <body>
+    <!-- menu=========================== -->
+    <div class="menu">
+      <div class="menu-content">
+        <a href="../index/index.html"><img src="../pic/logo.png" alt="" class='nav-logo'></a>
+        <a href="../index/index.html" class='homebtn'><i class="fas fa-home"></i></a>
+        <ul class="menu-ul">
+          <li><a href="#" class='menutitle'>ABOUT</a></li>
+          <li><a href="../product/product.html" class='menutitle'>PRODUCTS</a></li>
+          <li><a href="../lego/lego.html" class='menutitle'>CUSTOMIZE</a></li>
+          <li><a href="../artists/artists.html" class='menutitle'>ARTISTS</a></li>
+          <li><a href="../news/news.html" class='menutitle'>NEWS</a></li>
+          <li><a href="#"><i class="fas fa-search"></i></a></li>
+          <li><a href="../registerlogin/registerlogin.html"><i class="fas fa-user"></i></a></li>
+          <li><a href="#" class='popcartbtn'><i class="fas fa-shopping-cart"></i></a></li>
+        </ul>
+      </div>
+      <!-- hamburger -->
+      <div class="menulist">
+        <input type="checkbox" id='check'>
+        <label for="check"><span></span></label>
+        <div class="menuhamburger">
+          <ul>
+            <li><a href="../about/about.html"s>ABOUT</a></li>
+            <li><a href="../news/news.html">NEWS</a></li>
+            <li><a href="../product/product.html">PRODUCTS</a></li>
+            <li><a href="../lego/lego.html">CUSTOMIZE</a></li>
+            <li><a href="../artists/artists.html">ARTIST</a></li>
+            <li><a href="../registerlogin/registerlogin.html">MEMBER</a></li>
+            <li><a href="../cart/cart.html">CART</a></li>
+          </ul>
+        </div>
+        <div class="menulist-bg">
+        </div>
+        <div class="menulist-img">
+          <img src="#" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="wrap">
+      <!-- cart ========================-->
+      <div class="cart-breadcrumb">
+        <p>Cart / Information / Shipping / Payment</p>
+      </div>
+
+      <div class="cart2-container">
+        <div class="cart2-left">
+          <div class="cart2-info">
+            <h3>CONTACT</h3>
+            <p>tibame@gmail.com</p>
+          </div>
+          <div class="cart2-info">
+            <h3>NAME</h3>
+            <p>ANYI LEE</p>
+          </div>
+          <div class="cart2-info">
+            <h3>SHIP</h3>
+            <p>4F., No. 87, Xinhu 2nd Rd., Neihu Dist., Taipei City 114065, Taiwan (R.O.C.), 114 Taipei, Taiwan</p>
+          </div>
+          <div class="cart3-info">
+            <h3>PHONE</h3>
+            <p>0912345678</p>
+          </div>
+          <div class="cart2-btn">
+            <a href='../cart2/cart2.html'>Change</a>
+          </div>
+          <hr>
+
+          <div class="cart3-payment">
+            <h3>PAYMENT</h3>
+            <p>All transactions are secure and encrypted</p>
+
+            <div class="cart3-payment-credit">
+              <h4>Credit Card</h4>
+              <i class="fab fa-cc-visa"></i>
+              <i class="fab fa-cc-mastercard"></i>
+              <div class="cart3-payment-card-name">
+                <input type="text" name="" value="" placeholder="Bank Name" id='CardName' onBlur="stop()" onFocus="showdata()">
+              </div>
+              <div class="cart3-payment-credit-card">
+                <input type="text" name="" value="" placeholder="Card Number" id='CardNum' onBlur="stop()" onFocus="showdata()" maxlength='12'>
+              </div>
+              <div class="cart3-payment-card-name">
+                <input type="text" name="" value="" placeholder="Name of Card" id='NameOfCard' onBlur="stop()" onFocus="showdata()">
+              </div>
+              <div class="cart3-payment-credit-detailed">
+                <input type="text" name="" value="" placeholder="Expiry Date (MM/YY)" id='ExpirationDate' onBlur="stop()" onFocus="showdata()">
+                <input type="text" name="" value="" placeholder="Security Code" class='securitycode' id='SecurityCode' onBlur="stop()" onFocus="showdata()" maxlength='3'>
+
+                <!-- card pic=============================== -->
+                <div class="cart3-cardpic">
+                  <div class="cart3-card c2">
+                    <img src="../pic/card-f.png" alt="" class='front'>
+                  </div>
+                  <div class="cart3-card c1">
+                    <img src="../pic/card-b1.png" alt="" class='back'>
+                  </div>
+                  <!--  -->
+                  <div class="CardName">
+                    <span id='CardNametxt'></span>
+                  </div>
+                  <div class="NameOfCard">
+                    <span id='NameOfCardtxt'></span>
+                  </div>
+                  <div class="CardNum">
+                    <span id='CardNumtxt'></span>
+                  </div>
+                  <div class="ExpirationDate">
+                    <span id='ExpirationDatetxt'></span>
+                  </div>
+                  <div class="SecurityCode">
+                    <span id='SecurityCodetxt'></span>
+                  </div>
+                </div>
+                <!-- card pic=============================== -->
+              </div>
+            </div>
+            <div class="cart3-billing">
+              <h3>Billing Address</h3>
+              <p>Select the address that matches your card or payment method.</p>
+              <div class="cart3-billing-same">
+                <label for=""><input type="radio" name="billing" value="" checked> Same as shipping address</label>
+              </div>
+              <div class="cart3-billing-dif">
+                <input type="radio" name="billing" value=""> <label for="">Use a different address</label>
+                <div class="cart3-billing-dif-info">
+                  <div class="cart2-shippingaddress">
+                    <input type="text" name="" value="" placeholder="First Name">
+                    <input type="text" name="" value="" placeholder="Last Name">
+                  </div>
+
+                  <div class="cart2-Company">
+                    <input type="text" name="" value="" placeholder="Company(Optional)">
+                  </div>
+
+                  <div class="cart2-address">
+                    <input type="text" name="" value="" placeholder="Address">
+                  </div>
+
+                  <div class="cart2-phone">
+                    <input type="text" name="" value="" placeholder="Phone">
+                  </div>
+                </div>
+              </div>
+              <div class="cart2-btn ">
+                <a href='../cart/cart.html' class='hlbtn'>Return To Cart</a>
+                <a href='#' onclick="paymentconfirm()">Pay Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cart3-orderconfirm">
+          <i class="far fa-check-circle"></i>
+          <h3>Thank you for your order</h3>
+          <p>Your order has been placed and is being processed.</p>
+          <p>You will receive an email with the order details.</p>
+          <a href="../index/index.html">Back to Home &nbsp<i class="fas fa-home"></i></a>
+        </div>
+        <!-- cart right======================================================== -->
+          <div class="cart2-right">
+            <div class="cart2-right-checkbox">
+              <i class="fas fa-cart-arrow-down"></i>
+              <p>Orders Details</p>
+              <i class="fas fa-chevron-down"></i>
+              <p class='totalamout-1'> NTD 48700</p>
+            </div>
+            <div class="cart2-right-wrap">
+              <div class="cart-right-container">
+                <div class="cart-productinfo" id='cart-productinfo'>
+
+                </div>
+                <!--  -->
+                <hr class='dashed'>
+                <div class="cart2-disc">
+                  <input type="text" name="" value="" placeholder="Discount Code">
+                  <input type="submit" name="" value="SUBMIT" class='discount_btn'>
+                </div>
+                <hr class='dashed'>
+
+                <div class="cart2-money">
+                  <div class="cart2-subtotal-num">
+                    <h4>SUBTOTAL</h4>
+                    <p class='totalamout'>NTD 48580</p>
+                  </div>
+                  <div class="cart2-shipping-num">
+                    <h4>SHIPPING</h4>
+                    <p>NTD 120</p>
+                  </div>
+                  <hr>
+                  <div class="cart2-total-num">
+                    <h4>TOTAL</h4>
+                    <p class='finalamount'> NTD 48700</p>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+
+<!-- wrap -->
+      <div class="bgblock">
+      </div>
+    </div>
+    <!-- cartpop===================================== -->
+    <div class="cartpop">
+      <div class="cartpop-close">
+        <button type="button" name="button" class='cartpop-close-btn'><i class="fas fa-times"></i></button>
+      </div>
+      <div class="cartpop-header">
+        <h1>Your Order</h1>
+      </div>
+    <!-- cartpop-item -->
+      <div class="cartpop-itemlist" id='cartpop-itemlist'>
+      </div>
+
+      <div class="cartpop-checkout">
+        <a href="../cart/cart.html">CHECKOUT</a>
+        <a>$</a>
+        <a href="../cart/cart.html" class='cartpop-total'>0</a>
+      </div>
+    </div>
+    <!-- cartpopitem-end=========================== -->
+    <!-- footer============================================================================= -->
+    <div class="footer cart3footer">
+        <div class="newsletter">
+          <h5>NEWSLETTER</h5>
+          <div class="newsletter-btn">
+            <form class="" action="index.html" method="post">
+              <input type="text" name="" value="" placeholder="Email">
+              <input type="submit" name="" value="Submit">
+            </form>
+          </div>
+          <p>Sign up to our newsletter for special things and receive 10% off your next order</p>
+        </div>
+        <div class="site">
+          <h5>Site</h5>
+          <ul>
+            <li><a href="../about/about.html">About</a></li>
+            <li><a href="../news/news.html">News</a></li>
+            <li><a href="../product/product.html">Products</a></li>
+            <li><a href="../artists/artists.html">Artists</a></li>
+          </ul>
+        </div>
+        <div class="order-support">
+          <h5>Order & Support</h5>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Services</a></li>
+            <li><a href="#">Language</a></li>
+          </ul>
+        </div>
+        <div class='warning'>
+          <p>
+            本網站為緯育TibaMe前端設計工程師班第68期學員專題作品，本平台僅供學習、展示之用。參考資源:Pinterest|MightyJaxx|Minifig Builder|DDTStore。若有侵權疑慮，您可以私訊[TibaMe-前端設計工程師養成班]，後續會由專人協助處理。
+            ※ [TibaMe-前端設計工程師養成班]請超連結https://www.facebook.com/webindex/
+          </p>
+        </div>
+    </div>
+    <script type="text/javascript">
+      var CardName=document.getElementById('CardName');
+      var CardNum=document.getElementById('CardNum');
+      var NameOfCard=document.getElementById('NameOfCard');
+      var ExpirationDate=document.getElementById('ExpirationDate');
+      var SecurityCode=document.getElementById('SecurityCode');
+
+      function showdata(){
+        aa= setInterval(function(){
+        document.getElementById('CardNametxt').innerText = CardName.value;
+        document.getElementById('CardNumtxt').innerText = CardNum.value;
+        document.getElementById('NameOfCardtxt').innerText = NameOfCard.value;
+        document.getElementById('ExpirationDatetxt').innerText = ExpirationDate.value;
+        document.getElementById('SecurityCodetxt').innerText = SecurityCode.value;
+        },500);
+      }
+
+      function stop(){
+      clearInterval(aa);
+      }
+
+    </script>
+    <script type="text/javascript" src="../../js/project.js"></script>
+  </body>
+</html>

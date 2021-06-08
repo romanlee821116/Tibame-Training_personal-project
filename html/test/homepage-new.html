@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://kit.fontawesome.com/8c3a8ab95b.js" crossorigin="anonymous"></script>
+
+    <!-- <link rel="stylesheet" href="https://use.typekit.net/kzc0yzk.css"> -->
+    <link href="//db.onlinewebfonts.com/c/97d6f29a4bda3a872dad26cc5b2d0d7b?family=Haettenschweiler" rel="stylesheet" type="text/css"/>
+    <!-- <link href="./css/foundation.css" rel="stylesheet" type="text/css" /> -->
+    <link href="testnew.css" rel="stylesheet" type="text/css" />
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    <script type="text/javascript">
+       var header_active = function(){
+       // 取得使用者滑了多少 px
+       var scroll_top = $(window).scrollTop();
+       // 將 scroll_top 數值放到 p.-pos 內容
+       $("p.-pos").html(scroll_top);
+       if(scroll_top >= 300){
+         $(".menu-content").addClass("on");
+         $(".menu").css({'background-color':'transparent'});
+         $('.backtop').addClass('showback');
+       }else{
+         $(".menu-content").removeClass("on");
+         $(".menu").css({'background-color':'#333333'});
+         $('.backtop').removeClass('showback');
+       }
+       };
+
+       $(function(){
+       // 第三步：偵測頁面滑動時會觸發
+       $(window).scroll(function(){
+         header_active();
+       });
+     });
+     </script>
+
+     <script type="text/javascript" src="scripts/jquery.parallax-1.1.3.js"></script>
+     <script type="text/javascript" src="scripts/jquery.localscroll-1.2.7-min.js"></script>
+     <script type="text/javascript" src="scripts/jquery.scrollTo-1.4.2-min.js"></script>
+     <script type="text/javascript">
+     $(document).ready(function(){
+       $('#nav').localScroll(800);
+
+       //.parallax(xPosition, speedFactor, outerHeight) options:
+       //xPosition - Horizontal position of the element
+       //inertia - speed to move relative to vertical scroll. Example: 0.1 is one tenth the speed of scrolling, 2 is twice the speed of scrolling
+       //outerHeight (true/false) - Whether or not jQuery should use it's outerHeight option to determine when a section is in the viewport
+       $('#intro').parallax("50%", 0.1);
+       $('#second').parallax("50%", 0.5);
+       $('#third').parallax("50%", 0);
+       $('#forth').parallax("50%", 0.6);
+     })
+     </script>
+  </head>
+  <body>
+  <div class="s1">
+    <div class='s1-bg' id='intro'>
+    </div>
+    <div class='s1-bg' id='second'>
+    </div>
+    <div class='s1-bg' id='third'>
+    </div>
+    <div class='s1-bg' id='forth'>
+    </div>
+  </div>
+    <!-- 漢堡選單 -->
+    <div class="menulist">
+      <input type="checkbox" id='check'>
+      <label for="check"><span></span></label>
+      <div class="menuhamburger">
+        <ul>
+          <li><a href="http://127.0.0.1:3000/project/HTML/ABOUT/about.html">ABOUT</a></li>
+          <li><a href="http://127.0.0.1:3000/project/HTML/NEWS/news.html">NEWS</a></li>
+          <li><a href="http://127.0.0.1:3000/project/HTML/PRODUCT/product.html">PRODUCTS</a></li>
+          <li><a href="http://127.0.0.1:3000/project/HTML/ARTISTS/ARTISTS.html">ARTIST</a></li>
+          <li><a href="http://127.0.0.1:3000/project/HTML/REGISTER%26LOGIN/REGISTER%26LOGIN.html">MEMBER</a></li>
+        </ul>
+      </div>
+      <div class="menulist-bg">
+      </div>
+      <div class="menulist-img">
+        <img src="../pic/menuburger-pic1.jpg" alt="">
+      </div>
+    </div>
+
+
+  <div class="wrap">
+    <!-- menu================================= -->
+    <div class="navbar">
+      <div class="menu-content">
+        <a href="http://127.0.0.1:3000/project/HTML/test/test.html"><img src="../pic/logo.png" alt=""></a>
+        <ul class='menu-ul'>
+          <li><a href="http://127.0.0.1:3000/project/HTML/ABOUT/about.html" class='menutitle'>ABOUT</a></li>
+          <li><a href="http://127.0.0.1:3000/project/HTML/PRODUCT/product.html" class='menutitle'>PRODUCTS</a></li>
+          <li><a href="http://127.0.0.1:3000/project/HTML/ARTISTS/ARTISTS.html" class='menutitle'>ARTISTS</a></li>
+          <li><a href="http://127.0.0.1:3000/project/HTML/NEWS/news.html" class='menutitle'>NEWS</a></li>
+          <li><input type="text" name="request" value="" class='menu-request'></li>
+          <li><a href="#"><i class="fas fa-search"></i></a></li>
+          <li><a href="#"><i class="fas fa-user"></i></a></li>
+          <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+        </ul>
+      </div>
+    </div>
+      <!-- about============================= -->
+      <div class="s2-about">
+        <div class="s2-about-txt">
+          <p>SOFUBI STUDIO is a global collective of creative types,
+            engineers & manufacturing wizards that love sharing the fun of character & toy production
+            as we journey together towards your goals & ambitions.</p>
+          <a href="http://127.0.0.1:3000/project/HTML/ABOUT/about.html">Learn More</a>
+        </div>
+        <div class='s2-circlebg'></div>
+        <div class="s2-about-video">
+          <video src="../HOMEPAGE/Nakamura moe.mp4" autoplay loop muted>
+          </video>
+        </div>
+        <div class="s2-shoppic">
+          <img src="../pic/shoppic.png" alt="">
+        </div>
+        <div class="s2-bigword">
+          <h1>SOFUBI</h1>
+        </div>
+      </div>
+      <!-- 第三幕滿版圖開門=============================== -->
+      <div class="s3-opendoor">
+        <img src="../pic/James-Jean19.jpg" alt="">
+        <div class="s3-opendoor-slogan">
+          <h1>“History is history; Now is now. </h1>
+          <h1>Forget about history. Now is happy.”</h1>
+          <p>- Takashi Murakami -</p>
+        </div>
+      </div>
+      <!-- 第四幕 NEWS====================================-->
+      <div class="s4-news">
+        <div class="s4-news-item newsitem1">
+          <div class="s4-news-item-img">
+            <a href="http://127.0.0.1:3000/project/HTML/NEWS/news.html"><img src="../pic/newspic1.jpg" alt=""></a>
+          </div>
+          <div class="s4-news-item-txt">
+            JOAN CORNELLÀ’S "MY Life Is Pointless" Exhibition In Collaboration With Sotheby's
+          </div>
+          <h2>04/03</h2>
+        </div>
+        <div class="s4-news-item newsitem2">
+          <div class="s4-news-item-img">
+            <a href="http://127.0.0.1:3000/project/HTML/NEWS/news.html"><img src="../pic/newspic2.png" alt=""></a>
+          </div>
+          <div class="s4-news-item-txt">
+            KAWS DEBUTS INFLATABLE SCULPTURE ON DOHA’S DHOW HARBOR
+          </div>
+          <h2>03/27</h2>
+        </div>
+        <div class="s4-news-item newsitem3">
+          <div class="s4-news-item-img">
+            <a href="http://127.0.0.1:3000/project/HTML/NEWS/news.html"><img src="../pic/newspic3.jpg" alt=""></a>
+          </div>
+          <div class="s4-news-item-txt">
+            AllRightsReserved Debuts Creative Project "MEET___PROJECT"
+          </div>
+          <h2>03/16</h2>
+        </div>
+        <div class="s4-news-item newsitem4">
+          <div class="s4-news-item-img">
+            <a href="http://127.0.0.1:3000/project/HTML/NEWS/news.html"><img src="../pic/newspic4.jpg" alt=""></a>
+          </div>
+          <div class="s4-news-item-txt">
+            The 37-Meter-COMPANION Docking In Victoria Harbour - KAWS:HOLIDAY HONG KONG
+          </div>
+          <h2>02/20</h2>
+        </div>
+        <div class="s4-news-button">
+          <button type="button" name="button">VIEW ALL</button>
+        </div>
+        <div class="s4-bigword">
+          <h1>NEWS</h1>
+        </div>
+        <div class="wave-bot-l"></div>
+        <div class="wave-bot-r"></div>
+      </div>
+  <!-- lego============================================== -->
+  <div class="s5-lego">
+    <img src="../pic/lego_bg.PNG" alt="" >
+    <h1>MAKE YOU OWN FIGURE</h1>
+    <a class='s5-lego-btn' href='http://127.0.0.1:3000/project/HTML/LEGO/lego.html'>START</a>
+    <img src="../pic/lego1.png" alt="" class='lego-pic-left'>
+    <img src="../pic/lego2.png" alt="" class='lego-pic-right'>
+  </div>
+  <!-- products========================================== -->
+  <div class="s6-newarrivals">
+    <div class="s6-newarrivals-whitebg">
+    </div>
+    <div class="s6-newarrivals-circleBG" id='circleBG'>
+      <div class="s6-newarrivals-item1 napic">
+        <img src="../pic/na2-1.jpg" alt="" class='rotatepic'>
+      </div>
+      <div class="s6-newarrivals-item2 napic">
+        <img src="../pic/na3-1-c.jpg" alt="" class='rotatepic'>
+      </div>
+      <div class="s6-newarrivals-item3 napic">
+        <img src="../pic/na6-c.jpg" alt="" class='rotatepic'>
+      </div>
+      <div class="s6-newarrivals-item4 napic">
+        <img src="../pic/na4.jpg" alt="" class='rotatepic'>
+      </div>
+    </div>
+    <div class="s6-newarrivals-productinfo">
+      <div class="s6-newarrivals-productinfo-1 nainfo">
+        <h2>Caprice Papyrus 03</h2>
+        <p>Yoshitoshi Kanemaki, Japan</p>
+        <p>Sculpture</p>
+        <h2>TWD 360,000</h2>
+      </div>
+      <div class="s6-newarrivals-productinfo-2 nainfo">
+        <h2>Alice In Wasteland</h2>
+        <p>ABCNT, United States</p>
+        <p>Vinyl Art Toy</p>
+        <h2>TWD 9,800</h2>
+      </div>
+      <div class="s6-newarrivals-productinfo-3 nainfo">
+        <h2>XXRAY PLUS: COOKIE MONSTER</h2>
+        <p>Jason Freeny, United States</p>
+        <p>Vinyl Art Toy</p>
+        <h2>TWD 6,000</h2>
+      </div>
+      <div class="s6-newarrivals-productinfo-0 nainfo">
+        <h2>HOI BA LONG - TAIHE PALACE</h2>
+        <p>Black Seed Toys X PopLife, Taiwan</p>
+        <p>Vinyl Art Toy</p>
+        <h2>TWD 22,000</h2>
+      </div>
+    </div>
+    <div class="s6-newarrivals-sp">
+      <!-- <div class="s6-newarrivals-sp-btn">
+        <i class="fas fa-caret-left" id='rotatebtn-left'></i>
+      </div> -->
+      <div class="s6-newarrivals-spitem1 na-smallpic">
+        <img src="../pic/na6-c.jpg" alt="">
+      </div>
+      <div class="s6-newarrivals-spitem2 na-smallpic">
+        <img src="../pic/na3-1-c.jpg" alt="">
+      </div>
+      <div class="s6-newarrivals-spitem3 na-smallpic">
+        <img src="../pic/na2-1.jpg" alt="">
+      </div>
+      <div class="s6-newarrivals-spitem0 na-smallpic">
+        <img src="../pic/na4.jpg" alt="">
+      </div>
+      <div class="s6-newarrivals-sp-btn">
+        <i class="fas fa-caret-right" id='rotatebtn-right'></i>
+      </div>
+    </div>
+    <div class="s6-bigword">
+      <h1>NEW ARRIVALS</h1>
+    </div>
+    <div class="s6-btn">
+      <a href='http://127.0.0.1:3000/project/HTML/PRODUCT/product.html'>VIEW ALL</a>
+    </div>
+  </div>
+<!--s7-artists==========================================  -->
+  <div class="s7-artists">
+    <div class="s7-bigword">
+      <h1>ARTISTS</h1>
+    </div>
+    <div class="s7-artists-item1">
+      <div class="s7-artists-item1-pic">
+        <img src="../pic/artist6-1.jpg" alt="">
+      </div>
+      <h3>01</h3>
+      <p>ALEX<br>&nbsp FACE</p>
+      <div class="s7-artists-item1-art">
+        <h4>Patcharapol Tangruen, also known as Alex Face, is a well-known and influential graffiti artist in Thailand.</h4>
+        <img src="../pic/artistart1.jpg" alt="">
+        <h4>Baby Beyond, graffiti, Taiwan</h4>
+      </div>
+
+    </div>
+    <div class="s7-artists-item2">
+      <div class="s7-artists-item2-pic">
+        <img src="../pic/artist4.png" alt="">
+      </div>
+      <h3>02</h3>
+      <p>&nbspNAKAMURA<br>&nbspMOE</p>
+      <div class="s7-artists-item2-art">
+        <h4>Moe Nakamura is a contemporary Japanese artist recently in the spotlight, the Tokyo art scene today is on a rapid ascent, set to spur a whirlwind of rejuvenation.</h4>
+        <img src="../pic/artistart2.png" alt="">
+        <h4>Cloud Child, Sculpture, Japan</h4>
+      </div>
+    </div>
+    <div class="s7-artists-item3">
+      <div class="s7-artists-item3-pic">
+        <img src="../pic/artist3.jpg" alt="">
+      </div>
+      <h3>03</h3>
+      <p>KASING<br>LUNG</p>
+      <div class="s7-artists-item3-art">
+        <h4>Kasing is a children’s book illustrator living in Belgium. He started his collaboration with How2work by publishing a Chinese illustrated story book and a series of collectible figures in 2011.</h4>
+        <img src="../pic/artistart3.jpg" alt="">
+        <h4>The Monsters, painting, Hong Kong</h4>
+      </div>
+    </div>
+    <a href="#" class='s7-artists-btn'>VIEW ALL</a>
+  </div>
+<!--s8-detailed info========================================= -->
+  <div class="s8-shopinfo">
+    <div class="s8-shopinfo-bg">
+      <img src="../pic/footerbg-2.jpg" alt="">
+    </div>
+    <div class="s8-shopinfo-address">
+      <div class='s8-shopinfo-twaddress'>
+        <h3>SOFUBI STUDIO</h3>
+        <p>104台北市中山區南京東路三段219號4樓</p>
+        <p>11:00 A.M - 21:00 P.M</p>
+        <p>03-25313596</p>
+        <p>info@sofubistuidio.com</p>
+      </div>
+
+      <div class='s8-shopinfo-engaddress'>
+        <h3></h3>
+        <p>4F., No. 219, Sec. 3, Nanjing E. Rd., Zhongshan Dist., Taipei City 104, Taiwan (R.O.C.)</p>
+        <p>11:00 A.M - 21:00 P.M</p>
+        <p>03-25313596</p>
+        <p>info@sofubistuidio.com</p>
+      </div>
+    </div>
+    <div class="s8-shopinfo-map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3614.4711281091177!2d121.54377738361069!3d25.05201614435146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1stibame!5e0!3m2!1szh-TW!2stw!4v1619667417865!5m2!1szh-TW!2stw" width="450" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      <!-- <a href="#"><img src="../pic/map-1.PNG" alt=""></a> -->
+    </div>
+  </div>
+<!-- footer============================================== -->
+  <div class="footer">
+    <div class="newsletter">
+      <h5>NEWSLETTER</h5>
+      <div class="newsletter-btn">
+        <form class="" action="index.html" method="post">
+          <input type="text" name="" value="" placeholder="Email">
+          <input type="submit" name="" value="Submit">
+        </form>
+      </div>
+      <p>Sign up to our newsletter for special things and receive 10% off your next order</p>
+    </div>
+    <div class="site">
+      <h5>Site</h5>
+      <ul>
+        <li><a href="http://127.0.0.1:3000/project/HTML/ABOUT/about.html">About</a></li>
+        <li><a href="http://127.0.0.1:3000/project/HTML/NEWS/news.html">News</a></li>
+        <li><a href="http://127.0.0.1:3000/project/HTML/PRODUCT/product.html">Products</a></li>
+        <li><a href="http://127.0.0.1:3000/project/HTML/ARTISTS/ARTISTS.html">Artists</a></li>
+      </ul>
+    </div>
+    <div class="order-support">
+      <h5>Order & Support</h5>
+      <ul>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms & Services</a></li>
+        <li><a href="#"><i class="fas fa-globe-americas"></i>Language</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="backtop">
+    <a href="#"><i class="fas fa-angle-up"></i></a>
+  </div>
+
+<!-- wrap================================================ -->
+</div>
+  <!-- <script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script> -->
+
+  <script type="text/javascript">
+     var deg=90;
+     var textnum=2;
+      document.getElementById('rotatebtn-right').addEventListener("click", function(){
+      document.getElementById('circleBG').style.transform=`rotate(${deg}deg)`;
+       $('.rotatepic').css({'transform':`rotate(${-deg}deg)`});
+       $('.nainfo').css({'opacity':'0'});
+       $(`.s6-newarrivals-productinfo-${textnum%4}`).css({'opacity':'1'});
+       $('.na-smallpic').css({'background-color':'transparent','opacity':'.3'});
+       $(`.s6-newarrivals-spitem${textnum%4}`).css({'background-color':'rgba(255,255,255,.5)','border-radius':'10px','opacity':'1'});
+       deg+=90;
+       textnum+=1;
+      })
+  </script>
+
+
+  </body>
+</html>
+s

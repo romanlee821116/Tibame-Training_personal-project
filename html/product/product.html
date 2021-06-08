@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link href="../../css/product-rwd.css" rel="stylesheet">
+    <link href="../../css/innernavbar.css" rel="stylesheet">
+    <link href="../../css/footer.css" rel="stylesheet">
+    <link href="../../css/cartpop.css" rel="stylesheet">
+
+    <!-- Bootstrap 的 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link href="../../css/cartpop.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8c3a8ab95b.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script> -->
+    <script src='../../js/jquery.zoom.js'></script>
+    <script type="text/javascript">
+      window.onload=productshow;
+      function productshow(){
+        var p1=document.getElementById('product-detail');
+        var cross=document.getElementById('cross');
+        var minus=document.getElementById('minus');
+        var plus=document.getElementById('plus');
+        var buynum=document.getElementById('buynum');
+        var newarrival=document.getElementById('newarrival');
+        var shopall=document.getElementById('shopall');
+
+        p1.addEventListener('click',function(e){
+          $('.product-details').removeClass('hide');
+          $('.pressbanner').css({'display':'block'});
+          e.preventDefault();
+        });
+
+
+
+        cross.addEventListener('click',function(e){
+          $('.product-details').addClass('hide');
+          $('.pressbanner').css({'display':'none'});
+          e.preventDefault();
+        })
+
+        plus.addEventListener('click',function(){
+          var productnum=document.getElementById('buynum').innerText;
+          buynum.innerText=parseInt(productnum)+1;
+          event.preventDefault();
+        })
+
+        minus.addEventListener('click',function(){
+          var newproductnum=document.getElementById('buynum').innerText;
+          a=parseInt(newproductnum);
+          if(a!=1){
+            buynum.innerText=parseInt(newproductnum)-1;
+          }else{
+            buynum.innerText=1;
+          }
+        })
+
+        newarrival.addEventListener('click',function(){
+          $('#product-list1').css({'display':'none'});
+          $('#product-list3').css({'display':'none'});
+          event.preventDefault();
+        })
+
+        shopall.addEventListener('click',function(){
+          $('.row').css({'display':'flex'});
+          event.preventDefault();
+        })
+      };
+    </script>
+
+    <title>SOFUBI STUDIO</title>
+
+  </head>
+  <body>
+    <div class="wrap">
+      <!-- menu=========================== -->
+      <div class="menu">
+        <div class="menu-content">
+          <a href="../index/index.html"><img src="../pic/logo.png" alt="" class='nav-logo'></a>
+          <a href="../index/index.html" class='homebtn'><i class="fas fa-home"></i></a>
+          <ul class="menu-ul">
+            <li><a href="../about/about.html" class='menutitle'>ABOUT</a></li>
+            <li><a href="../product/product.html" class='current-page menutitle'>PRODUCTS</a></li>
+            <li><a href="../lego/lego.html" class='menutitle'>CUSTOMIZE</a></li>
+            <li><a href="../artists/artists.html" class='menutitle'>ARTISTS</a></li>
+            <li><a href="../news/news.html" class='menutitle'>NEWS</a></li>
+            <li><a href="#"><i class="fas fa-search"></i></a></li>
+            <li><a href="../registerlogin/registerlogin.html"><i class="fas fa-user"></i></a></li>
+            <li><a href="#" class='popcartbtn'><i class="fas fa-shopping-cart"></i></a></li>
+          </ul>
+        </div>
+        <!-- hamburger -->
+        <div class="menulist">
+          <input type="checkbox" id='check'>
+          <label for="check"><span></span></label>
+          <div class="menuhamburger">
+            <ul>
+              <li><a href="../about/about.html"s>ABOUT</a></li>
+              <li><a href="../news/news.html">NEWS</a></li>
+              <li><a href="../product/product.html">PRODUCTS</a></li>
+              <li><a href="../lego/lego.html">CUSTOMIZE</a></li>
+              <li><a href="../artists/artists.html">ARTIST</a></li>
+              <li><a href="../registerlogin/registerlogin.html">MEMBER</a></li>
+              <li><a href="../cart/cart.html">CART</a></li>
+            </ul>
+          </div>
+          <div class="menulist-bg">
+          </div>
+          <div class="menulist-img">
+            <img src="#" alt="">
+          </div>
+        </div>
+      </div>
+      <!-- 第一面=========================================== -->
+      <div class="product-banner">
+        <img src="../pic/productbanner2.png" alt="" id='product-banner-pic'>
+      </div>
+      <!-- <div class="page-location">
+        <p>HOMEPAGE &nbsp &rsaquo; &nbsp PRODUCT</p>
+      </div> -->
+      <div class="product-breadcrumb">
+          <a href="#" id='shopall'>Shop All &nbsp/</a>
+          <a href="#" id='newarrival'>New Arrival &nbsp/</a>
+          <a href="#">Nakamura Moe &nbsp/</a>
+          <a href="#">Kashing Lung &nbsp/</a>
+          <a href="#">Shoko Nakazawa &nbsp/</a>
+          <a href="#">Yusuke Hana </a>
+      </div>
+<!-- 商品九宮格 -->
+      <div class="container-fluid">
+        <!--row1 list1 -->
+        <div class="row product-list1" id='product-list1'>
+          <div class="col-md-6">
+            <!--product1-->
+            <div class="p1" data-id='100000'>
+              <div class="p-pic">
+                <img src="../pic/p1.jpg">
+                <div class="p-pic-addcart">
+                  <a href="#" id='product-detail'>More Details</a>
+                </div>
+              </div>
+              <div class="p1-txt">
+                <i class="fas fa-cart-plus"></i>
+                <h3>Down but not out</h3>
+                <p>$100,000</p>
+              </div>
+            </div>
+            <!--product2 -->
+            <div class="p1" data-id='4600'>
+              <div class="p-pic">
+                <img src="../pic/p17.jpg">
+                <div class="p-pic-addcart">
+                  <a href="#">More Details</a>
+                </div>
+              </div>
+              <div class="p1-txt">
+                <i class="fas fa-cart-plus"></i>
+                <h3>Bear@Brick peko</h3>
+                <p>$4,600</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 ">
+            <!--product3-->
+            <div class="p1" data-id='5200'>
+              <div class="p-pic">
+                <img src="../pic/p10.jpg">
+                <div class="p-pic-addcart">
+                  <a href="#">More Details</a>
+                </div>
+              </div>
+              <div class="p1-txt">
+                <i class="fas fa-cart-plus"></i>
+                <h3>Gojimomo</h3>
+                <p>$5,200</p>
+              </div>
+            </div>
+            <!--product4-->
+            <div class="p1" data-id='6300'>
+              <div class="p-pic">
+                <img src="../pic/p8.jpg">
+                <div class="p-pic-addcart">
+                  <a href="#">More Details</a>
+                </div>
+              </div>
+              <div class="p1-txt">
+                <i class="fas fa-cart-plus"></i>
+                <h3>Hosuke</h3>
+                <p>$6,300</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--row2 list2 -->
+        <div class="row product-list2" id='product-list2'>
+          <div class="col-md-6">
+            <!--product5-->
+            <div class="p1" data-id='13000'>
+              <div class="p-pic">
+                <img src="../pic/p11.png">
+                <div class="p-pic-soldout">
+                  <span>Sold Out</span>
+                </div>
+              </div>
+              <div class="p1-txt">
+                <i class="fas fa-cart-plus"></i>
+                <h3>KAWS-black</h3>
+                <p>$13,000</p>
+              </div>
+            </div>
+            <!--product6-->
+            <div class="p1" data-id='3500'>
+              <div class="p-pic">
+                <img src="../pic/p12.jpg">
+                <div class="p-pic-addcart">
+                  <a href="#">More Details</a>
+                </div>
+              </div>
+              <div class="p1-txt">
+                <i class="fas fa-cart-plus"></i>
+                <h3>GANS-Boy-U2</h3>
+                <p>$3,500</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <!--product7-->
+            <div class="p1" data-id='7000'>
+              <div class="p-pic">
+                <img src="../pic/p14.jpg">
+                <div class="p-pic-addcart">
+                  <a href="#">More Details</a>
+                </div>
+              </div>
+              <div class="p1-txt">
+                <i class="fas fa-cart-plus"></i>
+                <h3>Salamonster</h3>
+                <p>$7,000</p>
+              </div>
+            </div>
+            <!--product8-->
+            <div class="p1" data-id='7200'>
+              <div class="p-pic">
+                <img src="../pic/p16.jpg">
+                <div class="p-pic-addcart">
+                  <a href="#">More Details</a>
+                </div>
+              </div>
+              <div class="p1-txt">
+                <i class="fas fa-cart-plus"></i>
+                <h3>Maguro senpei</h3>
+                <p>$7,200</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row product-list3" id='product-list3'>
+          <div class="col-md-6">
+            <!--product9-->
+            <div class="p1" data-id='8200'>
+              <div class="p-pic">
+                <img src="../pic/p15.jpg">
+                <div class="p-pic-addcart">
+                  <a href="#">More Details</a>
+                </div>
+              </div>
+              <div class="p1-txt">
+                <i class="fas fa-cart-plus"></i>
+                <h3>Babybeyond</h3>
+                <p>$8,200</p>
+              </div>
+            </div>
+            <!--product10-->
+            <div class="p1" data-id='4000'>
+              <div class="p-pic">
+                <img src="../pic/p20.jpg">
+                <div class="p-pic-addcart">
+                  <a href="#">More Details</a>
+                </div>
+              </div>
+              <div class="p1-txt">
+                <i class="fas fa-cart-plus"></i>
+                <h3>ppBaby</h3>
+                <p>$4,000</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <!--product11-->
+            <div class="p1" data-id='3600'>
+              <div class="p-pic">
+                <img src="../pic/p18.jpg">
+                <div class="p-pic-addcart">
+                  <a href="#">More Details</a>
+                </div>
+              </div>
+              <div class="p1-txt">
+                <i class="fas fa-cart-plus"></i>
+                <h3>DEDE 'MILK BABY'</h3>
+                <p>$3,600</p>
+              </div>
+            </div>
+            <!--product12-->
+            <div class="p1" data-id='2800'>
+              <div class="p-pic">
+                <img src="../pic/p21.jpg">
+                <div class="p-pic-addcart">
+                  <a href="#">More Details</a>
+                </div>
+              </div>
+              <div class="p1-txt">
+                <i class="fas fa-cart-plus"></i>
+                <h3>Rangeas. jr</h3>
+                <p>$2,800</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- product details========================= -->
+          <div class="product-details hide">
+            <div class="cross">
+              <a href="#"><i class="fas fa-times" id='cross'></i></a>
+            </div>
+            <div class="product-details-pic">
+              <img src="../pic/p1.jpg" alt="" class=''>
+            </div>
+            <div class="product-details-txt">
+              <div class="product-details-txt-info">
+                <h4>Yusuke Hanai</h4>
+                <p>Down but not out</p>
+                <p>2017</p>
+                <p>30cm x 30cm</p>
+                <p>Poly Vinyl</p>
+                <h4>$100,000</h4>
+              </div>
+              <div class="product-details-txt-num">
+                <button type="button" name="button" class='minus'><i class="fas fa-minus" id='minus'></i></button>
+                <span id='buynum'>1</span>
+                <button type="button" name="button" class='plus'><i class="fas fa-plus" id='plus'></i></button>
+              </div>
+              <div class="add-to-cart">
+                <a href="#">Add To Cart</a>
+              </div>
+            </div>
+          </div>
+      </div>
+        <!-- nextpage ================================-->
+      <div class="pressbanner">
+      </div>
+      <div class="nextpage">
+        <ul>
+          <li><a href="#"><</a></li>
+          <li><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">></a></li>
+        </ul>
+      </div>
+      <!-- footer=========================================== -->
+      <div class="footer">
+          <div class="newsletter">
+            <h5>NEWSLETTER</h5>
+            <div class="newsletter-btn">
+              <form class="" action="index.html" method="post">
+                <input type="text" name="" value="" placeholder="Email">
+                <input type="submit" name="" value="Submit">
+              </form>
+            </div>
+            <p>Sign up to our newsletter for special things and receive 10% off your next order</p>
+          </div>
+          <div class="site">
+            <h5>Site</h5>
+            <ul>
+              <li><a href="../about/about.html">About</a></li>
+              <li><a href="../news/news.html">News</a></li>
+              <li><a href="../product/product.html">Products</a></li>
+              <li><a href="../artists/artists.html">Artists</a></li>
+            </ul>
+          </div>
+          <div class="order-support">
+            <h5>Order & Support</h5>
+            <ul>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms & Services</a></li>
+              <li><a href="#">Language</a></li>
+            </ul>
+          </div>
+          <div class='warning'>
+            <p>
+              本網站為緯育TibaMe前端設計工程師班第68期學員專題作品，本平台僅供學習、展示之用。參考資源:Pinterest|MightyJaxx|Minifig Builder|DDTStore。若有侵權疑慮，您可以私訊[TibaMe-前端設計工程師養成班]，後續會由專人協助處理。
+              ※ [TibaMe-前端設計工程師養成班]請超連結https://www.facebook.com/webindex/
+            </p>
+          </div>
+      </div>
+    </div>
+    <!-- cartpop===================================== -->
+    <div class="cartpop">
+      <div class="cartpop-close">
+        <button type="button" name="button" class='cartpop-close-btn'><i class="fas fa-times"></i></button>
+      </div>
+      <div class="cartpop-header">
+        <h1>Your Order</h1>
+      </div>
+    <!-- cartpop-item -->
+      <div class="cartpop-itemlist" id='cartpop-itemlist'>
+
+      </div>
+
+      <div class="cartpop-checkout">
+        <a href="../cart/cart.html">CHECKOUT</a>
+        <a>$</a>
+        <a href="../cart/cart.html" class='cartpop-total'>0</a>
+      </div>
+    </div>
+    <!-- cartpopitem-end=========================== -->
+    <script type="text/javascript" src="../../js/project.js"></script>
+
+    <!-- zoom================ -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+			$('.product-details-pic').zoom();
+      var i=0;
+      var changebanner=setInterval(function(){
+
+          var picnum=i%3;
+          document.getElementById('product-banner-pic').src='../pic/productbanner'+picnum+'.png';
+          i+=1;
+      },6000);
+		});
+    </script>
+  </body>
+</html>

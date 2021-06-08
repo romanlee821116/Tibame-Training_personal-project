@@ -1,0 +1,166 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: #000;
+  font-family: noto sans jp;
+}
+
+body{
+  /* width: 1920psx; */
+  /* height: 1500px; */
+  background-color: #000;
+  font-size: 16px;
+}
+
+.wrap{
+  width: 1200px;
+  /* height: 1500px; */
+  /* border: 1px solid green; */
+  margin: 0 auto;
+  background-color: #fff;
+  overflow: hidden;
+  background: url('../pic/image.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: -550px ;
+  /* background-color: rgba(255,255,255,.5); */
+  /* position: relative; */
+}
+
+.ca-container{
+  /* border: 3px solid blue; */
+  /* padding: 0 40px; */
+  width: 1000px;
+  margin: 0 auto;
+  padding-bottom: 50px;
+  display: flex;
+  background-color: rgba(255,255,255,.6);
+}
+/* menu ==============================================*/
+
+/* container =========================*/
+.ca-title{
+  width: 1000px;
+  text-align: center;
+  margin: 0 auto;
+  background-color: rgba(255,255,255,.6);
+  padding: 50px 0 0 0;
+}
+
+.ca-title h1{
+  font-size: 50px;
+  color: #333333;
+}
+
+.fast-login{
+  width: 45%;
+  /* border-right: 3px dotted #ccc; */
+  padding: 40px;
+}
+
+.fast-login-btn button{
+  display: block;
+  height:60px;
+  width: 75%;
+  margin: 80px 0px 0px 60px;
+  cursor: pointer;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  background-color: white;
+  text-align: left;
+  padding: 5px 30px;
+  position: relative;
+}
+
+.fast-login-btn button+button{
+  background-color: #3b5998;
+  color: white;
+}
+
+.fast-login-btn button:hover{
+  background-color: #333333;
+  color: #fa9800;
+}
+
+.fast-login-btn i{
+  position: relative;
+  left: 20px;
+  font-size: 28px;
+}
+
+.fa-google{
+  color: red;
+  background-color: transparent;
+}
+
+.fa-facebook{
+  color:white;
+}
+
+.ca-txt{
+  width: 55%;
+  padding: 40px;
+}
+
+.ca-txt>div{
+  margin-top: 20px;
+}
+
+.ca-txt p{
+  margin-bottom: 3px;
+}
+
+.ca-container input{
+  width:420px;
+  height: 30px;
+  padding-left: 10px;
+}
+
+
+
+.ca-txt-name input{
+  width:200px;
+  height: 30px;
+  margin: 10px 16px 0 0 ;
+  padding-left: 10px;
+}
+
+.ca-txt-advice input{
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+}
+
+.ca-txt-advice label{
+  margin-right: 20px;
+}
+
+.ca-txt-policy {
+  font-size: 14px;
+}
+
+.ca-txt-policy input{
+  width: 15px;
+  height: 15px;
+  margin: 30px 10px 40px 0;
+}
+
+.ca-txt-btn button{
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: #333333;
+  width: 120px;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: .3s;
+  margin-right: 20px;
+}
+
+.ca-txt-btn button:hover{
+  background-color: #333333;
+  color: #fa9800;
+}

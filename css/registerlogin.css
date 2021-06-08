@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: #000;
+  font-family: noto sans jp;
+  font-size: 14px;
+}
+
+body{
+  background-color: #000;
+}
+
+.wrap{
+  width: 100%;
+  margin: 0 auto;
+  background-color: #fff;
+  background-size: contain;
+  /* background-position: top -400px; */
+  background-position: top;
+  background: url('./../html/pic/kawsholiday.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+/* LOGIN================================ */
+.register{
+  display: flex;
+  padding: 50px;
+  width: 75%;
+  max-width: 900px;
+  height: auto;
+  min-height: 768px;
+  background-color: rgba(255,255,255,.5);
+  margin: 0 auto;
+  position: relative;
+
+}
+
+.register .newcustomer, .oldcustomer{
+  padding: 20px;
+  width: 50%;
+  position: relative;
+  top: 20vh;
+}
+
+.register h1{
+  font-size: 50px;
+  text-align: center;
+  position: absolute;
+  top: 30px;
+  left: 0 ;
+  width: 100%;
+}
+
+.register .newcustomer h5{
+  font-size: 18px;
+}
+
+.register .newcustomer p{
+  font-size: 14px;
+}
+
+.register .newcustomer a{
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: #333333;
+  /* width: 150px; */
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: .3s;
+  display: inline-block;
+  margin-top: 30px;
+}
+
+.register .newcustomer a:hover{
+  background-color: #333333;
+  color: #fa9800;
+}
+
+.register .oldcustomer h1{
+  font-size: 50px;
+  color: transparent;
+}
+
+.register .oldcustomer label{
+  font-size: 14px;
+}
+
+.register .oldcustomer h5{
+  font-size: 18px;
+}
+
+.register .oldcustomer p{
+  margin-top: 5px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.register .oldcustomer .oldcustomer-form input{
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 5px;
+}
+
+.register-signin{
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: flex-end;
+}
+
+
+.register .oldcustomer .oldcustomer-form button{
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: #333333;
+  width: 120px;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: .3s;
+  margin-right: 40px;
+}
+
+.register .oldcustomer .oldcustomer-form button:hover{
+  background-color: #333333;
+  color: #fa9800;
+}
+
+.register-signin a{
+  border-bottom: 1px solid black;
+  display: inline-block;
+  vertical-align: bottom;
+  transition: .3s;
+}
+.register-signin a:hover{
+  color: #fa9800;
+  border-bottom: 1px solid #fa9800;
+}
+
+@media screen and (max-width: 1160px){
+  .register{
+    display: flex;
+    padding: 20px;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: 768px;
+    background-color: rgba(255,255,255,.5);
+    margin: 0 auto;
+    position: relative;
+  }
+  @media screen and (max-width: 767px){
+    .register{
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      padding-bottom: 180px;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      min-height: 768px;
+      background-color: rgba(255,255,255,.5);
+      margin: 0 auto;
+      position: relative;
+    }
+    .register .newcustomer, .oldcustomer{
+      padding: 20px;
+      width: 80%;
+      margin: 0 auto;
+      padding-top: 80px;
+      position: relative;
+    }
+
+    .register .newcustomer, .oldcustomer{
+      padding: 20px;
+      width: 80%;
+      margin: 0 auto 80px auto;
+      padding-top: 80px;
+      position: relative;
+      padding-top: 60px;
+      top: 15vh;
+
+    }
+
+
+    .register .oldcustomer .oldcustomer-form input{
+      display: block;
+      width: 100%;
+      margin-bottom: 20px;
+      padding: 5px;
+    }
+
+    .register h1{
+      font-size: 30px;
+      text-align: center;
+      position: absolute;
+      top: 80px;
+      left: 0 ;
+      width: 100%;
+    }
+    .register .newcustomer h5{
+      font-size: 18px;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .register .oldcustomer h5{
+      font-size: 18px;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .register .newcustomer a{
+      background-color: #fff;
+      border: 1px solid #ccc;
+      color: #333333;
+      padding: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: .3s;
+      display: inline-block;
+      margin-top: 30px;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+  }
+}

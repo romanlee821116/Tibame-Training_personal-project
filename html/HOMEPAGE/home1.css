@@ -1,0 +1,145 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: #000;
+}
+
+body{
+  width: 1920px;
+  height: 5376px;
+}
+
+.wrap{
+  width: 1200px;
+  border: 1px solid green;
+  margin: 0 auto;
+}
+
+.menu{
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  border: 1px solid red;
+  display: none;
+
+}
+
+.menu li{
+  display: inline-block;
+  border: 1px solid #ccc;
+  font-size: 24px;
+  padding: 10px;
+  margin-left: 20px;
+}
+.menu img{
+  margin-right: 350px;
+}
+
+.video{
+  border: 1px solid blue;
+  display: flex;
+  width: 1200px;
+  height: 1080px;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  overflow: hidden;
+}
+
+video{
+width: auto;
+height: 1580px;
+opacity: .8;
+}
+.slogan{
+  position: absolute;
+  margin-top: -100px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.buy{
+  border: 3px solid #fff;
+  width: 150px;
+  height: 40px;
+  text-align: center;
+  line-height: 34px;
+  transition: .3s;
+  position: absolute;
+  margin-top: 350px;
+  font-size: 12px;
+}
+
+.buy h1, .slogan h1{
+  color: #fff;
+}
+
+.buy:hover{
+  transform: translateY(-10px);
+  background-color: rgba(0,0,0,.5);
+}
+
+.menulist{
+  width: 60px;
+  height: 50px;
+  background-color: transparent;
+  position: absolute;
+  right: 30px;
+  top: 10px;
+}
+
+.menulist span::before{
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 48px;
+  border-bottom: 4px solid #fff;
+  margin-top: -32px;
+  margin-left: 10px;
+}
+
+.menulist span::after{
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 50px;
+  border-bottom: 4px solid #fff;
+  margin-top: -16px;
+  margin-left: 10px;
+}
+
+.menulist .menuhamburger{
+  font-size: 30px;
+  display: none;
+}
+.menulist .menuhamburger ul:first-child{
+  margin-top: 50px;
+}
+
+.menulist .menuhamburger li{
+  margin-left:-190px;
+  width: 250px;
+  padding: 20px;
+  background: transparent;
+  text-align: center;
+}
+
+.menulist .menuhamburger li a{
+  color: #fff;
+}
+
+.menulist .menuhamburger li:hover a{
+  color: #fa9800;
+}
+
+.menulist #check{
+  opacity: 0;
+}
+
+.menulist #check:checked + .menuhamburger{
+  display: block;
+}

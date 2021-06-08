@@ -1,0 +1,123 @@
+.cartpop{
+  position: absolute;
+  top: 85px;
+  right: 0;
+  width: 35%;
+  height: 90vh;
+  background-color: #fff;
+  /* border: 1px solid blue; */
+  padding: 30px;
+  z-index: 999;
+  display: none;
+}
+.cartpop-header{
+  display: flex;
+  justify-content:space-between;
+  border-bottom: 2px solid #333333;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.cartpop-header p{
+  width: 35px;
+  height: 35px;
+  font-size: 18px;
+  border-radius: 50%;
+  border: 3px solid #333333;
+  text-align: center;
+  color: #333333;
+  font-weight: bold;
+}
+
+.cartpop-itemlist{
+  height: 300px;
+  overflow: scroll;
+  overflow-x:hidden;
+}
+
+.cartpop-item{
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 10px 0;
+  border-bottom: 2px solid #ccc;
+}
+
+.cartpop-item-pic{
+  width: 120px;
+  height: 120px;
+}
+
+.cartpop-item-pic img{
+  width: 100%;
+  height: 100%;
+}
+
+.cartpop-item-txt{
+  line-height: 30px;
+  width: 140px;
+  /* border: 1px solid red; */
+}
+
+.cartpop-item-txt-num{
+  margin-top: 5px;
+}
+
+.cartpop-item-txt-num button{
+  background-color: #fff;
+  border: none;
+  padding: 5px;
+  margin-right: 15px;
+  cursor: pointer;
+  margin: 0 5px;
+  font-size: 12px;
+}
+
+.cartpop-item-txt-num button:hover{
+  background-color: #fa9800;
+}
+
+.cartpop-item-txt-num span{
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.cartpop-remove button{
+  cursor: pointer;
+  background-color: #fff;
+  border: none;
+  padding: 5px 10px;
+}
+
+.cartpop-remove button:hover{
+  background-color: #fa9800;
+}
+
+.cartpop-checkout{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  line-height: 80px;
+  height: 80px;
+  background-color: #fa9800;
+  margin-top: 100px;
+  cursor: pointer;
+}
+
+.cartpop-checkout:hover a{
+  color: #fff;
+}
+
+.cartpop-checkout a{
+  margin: 0 20px;
+  font-weight: bold;
+  font-size: 20px;
+  color:#333333;
+}
+
+.popcartbtn-clicked{
+  font-size: 20px;
+  color: red;
+}

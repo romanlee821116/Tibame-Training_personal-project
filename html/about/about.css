@@ -1,0 +1,178 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: #000;
+  font-family: noto sans jp;
+}
+
+body{
+  /* width: 1920px; */
+  height: 1080px;
+  background-color: #000;
+}
+
+.wrap{
+  width: 1200px;
+  /* border: 1px solid green; */
+  margin: 0 auto;
+  background-color: #fff;
+  position: relative;
+}
+/* Menu========================== */
+
+/* LOGIN================================ */
+.about-sofubi{
+  width: 1200px;
+  height: 100vh;
+  /* background: linear-gradient(70deg, #fff 50%, transparent 10%) center center/100% 100%,
+    url('../pic/visual08-Copy.png') right center/80% 100%; */
+    padding: 50px;
+    /* border: 1px solid green; */
+    background: linear-gradient(70deg, #fff 50%, transparent 10%) center center/100% 100%,
+      url('../pic/aboutbg-1.jpg') right center/70% 100%;
+    position: relative;
+    /* animation-name: bordermove;
+    animation-duration: 5s;
+    animation-iteration-count:infinite; */
+    /* transition: 5s; */
+}
+/*
+@keyframes bordermove {
+  0% {background: linear-gradient(70deg, #fff 50%, transparent 10%) center center/100% 100%,
+    url('../pic/visual08-Copy.png') right center/80% 100%;}
+  50% {background: linear-gradient(110deg, #fff 50%, transparent 10%) center center/100% 100%,
+    url('../pic/visual08-Copy.png') right center/80% 100%;
+  }
+  100% {background: linear-gradient(70deg, #fff 50%, transparent 10%) center center/100% 100%,
+    url('../pic/visual08-Copy.png') right center/80% 100%;}
+} */
+
+.about-sofubi-intro{
+  width: 450px;
+  /* height: 600px; */
+  /* border: 1px solid blue; */
+  /* padding: 20px; */
+  z-index: 999;
+  position: relative;
+}
+
+.about-sofubi-intro h1{
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+
+.about-sofubi-intro p{
+  /* margin-bottom: 30px; */
+  font-size: 16px;
+}
+
+.about-sofubi-orangeBG{
+  width: 1200px;
+  height: 50vh;
+  bottom: 0px;
+  right: 0px;
+  /* border: 1px solid blue; */
+  background: linear-gradient(165deg, transparent 60%, red 10%);
+  position: absolute;
+  opacity: .2;
+}
+
+.about-sofubi-orangeBG-1{
+  width: 400px;
+  height: 50vh;
+  top: 0px;
+  right: 0px;
+  /* border: 1px solid blue; */
+  background: linear-gradient(25deg, transparent 65%, #fa9800 10%);
+  position: absolute;
+  opacity: .3;
+}
+
+.about-logopic{
+  width: 150px;
+  height: 150px;
+  /* border: 1px solid red; */
+  padding: 20px;
+  margin: 20px;
+}
+.about-logopic img{
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+
+/* footer==================================== */
+/* .footer{
+  width: 1200px;
+  height: 250px;
+  background-color: #333333;
+  display: flex;
+  padding: 20px 0;
+}
+
+.footer .newsletter{
+  width: 550px;
+  height: 100%;
+  padding: 10px 50px;
+}
+
+.footer .site, .order-support{
+  width: 250px;
+  padding: 10px 50px;
+}
+
+.footer li{
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.newsletter h5{
+  color: #fa9800;
+  margin-bottom: 5px;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.newsletter .newsletter-btn input[type='text']{
+  border: none;
+  height: 30px;
+  width: 250px;
+}
+
+.newsletter .newsletter-btn input[type='submit']{
+  border:none;
+  height: 30px;
+  width: 60px;
+  background-color: #fff;
+}
+
+.newsletter p{
+  color: #fff;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+
+.site h5, .order-support h5{
+  color: #fa9800;
+  font-size: 18px;
+  margin-top: 5px;
+}
+
+.site a, .order-support a{
+  color: #fff;
+  font-size: 16px;
+}
+
+.backtop i{
+  color: #fa9800;
+  font-size: 60px;
+  margin-left: 50px;
+  margin-top: 10px;
+} */

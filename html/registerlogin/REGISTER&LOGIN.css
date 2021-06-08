@@ -1,0 +1,135 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: #000;
+  font-family: noto sans jp;
+}
+
+body{
+  /* width: 1920px; */
+  /* height: 1080px; */
+  background-color: #000;
+}
+
+.wrap{
+  width: 1200px;
+  /* height: 1080px; */
+  /* border: 1px solid green; */
+  margin: 0 auto;
+  background-color: #fff;
+  background-size: contain;
+  position: relative;
+  overflow: hidden;
+  background-position: top -200px;
+  background: url('./../HTML/pic/4.-KAWS_HOLIDAY_1_High-Res.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+/* LOGIN================================ */
+.register{
+  display: flex;
+  padding: 50px;
+  width: 900px;
+  height: 710px;
+  background-color: rgba(255,255,255,.5);
+  margin: 0 auto;
+
+}
+
+.register .newcustomer, .oldcustomer{
+  padding: 25px;
+  width: 550px;
+}
+
+.register .newcustomer h1{
+  font-size: 50px;
+}
+
+.register .newcustomer h5{
+  margin: 20px 0;
+  font-size: 18px;
+}
+
+.register .newcustomer p{
+  font-size: 14px;
+}
+
+.register .newcustomer button{
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: #333333;
+  width: 150px;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: .3s;
+  margin-top: 30px;
+}
+
+.register .newcustomer button:hover{
+  background-color: #333333;
+  color: #fa9800;
+}
+
+.register .oldcustomer h1{
+  font-size: 50px;
+  color: transparent;
+}
+
+.register .oldcustomer label{
+  font-size: 14px;
+}
+
+.register .oldcustomer h5{
+  margin-top: 165px;
+  font-size: 18px;
+}
+
+.register .oldcustomer p{
+  margin-top: 5px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.register .oldcustomer .oldcustomer-form input{
+  display: block;
+  width: 330px;
+  margin-bottom: 20px;
+}
+
+.register .oldcustomer .oldcustomer-form input[type='submit']{
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: #333333;
+  width: 120px;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: .3s;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.register .oldcustomer .oldcustomer-form input[type='submit']:hover{
+  background-color: #333333;
+  color: #fa9800;
+}
+
+.register .oldcustomer .oldcustomer-form button{
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: #333333;
+  width: 180px;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: .3s;
+}
+
+.register .oldcustomer .oldcustomer-form button:hover{
+  background-color: #333333;
+  color: #fa9800;
+}

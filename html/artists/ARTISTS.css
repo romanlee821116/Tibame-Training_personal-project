@@ -1,0 +1,82 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: #000;
+  font-family: noto sans jp;
+}
+
+body{
+  /* width: 1920px; */
+  height: 1700px;
+  background-color: #000;
+}
+
+.wrap{
+  width: 1200px;
+  height: 1700px;
+  /* border: 1px solid green; */
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+/* Artist===================================== */
+.artist-sofubi{
+  width: 100%;
+  position: relative;
+}
+
+.artist-sofubi .banner{
+  width:  100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.artist-sofubi .banner img{
+  height: auto;
+  width: 100%;
+  margin-top: -150px;
+}
+
+.artist-list{
+  padding: 5px 50px;
+  position: absolute;
+  top: 300px;
+  left: 0;
+  z-index: 500;
+}
+
+.artist-list a{
+  font-size: 14px;
+  color: #4F4F4F;
+}
+
+.artist-list a:hover{
+  color: #fa9800;
+}
+
+.buy-artist{
+  width: 100%;
+  padding: 50px 0px 100px;
+  background-color: black;
+}
+
+.buy-artist button{
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: #333333;
+  width: 120px;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: .3s;
+  display: block;
+  margin: 0 auto;
+}
+
+.buy-artist button:hover{
+  background-color: #333333;
+  color: #fa9800;
+}
