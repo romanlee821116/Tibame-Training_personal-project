@@ -962,9 +962,27 @@
     z-index: 995;
   }
 
-  .s6-btn a{
+  /* .s6-btn a{
     bottom: 15%;
-    left: 25%;
+    left: 14vw;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    color: #333333;
+    width: 120px;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: .3s;
+    position: absolute;
+  } */
+
+  .s6-btn a{
+    /* bottom: 15%;
+    left: 14vw; */
+    top: 50%;
+    left: 0;
+    transform: translate(-100%, -50%);
     background-color: #fff;
     border: 1px solid #ccc;
     color: #333333;
@@ -2370,7 +2388,7 @@
       max-width: 630px;
       max-height: 250px;
       padding: 20px;
-      top: 35vh;
+      top: 30vh;
       right:0px;
       /* border: 1px solid red; */
       text-align: right;
@@ -2468,8 +2486,6 @@
     }
 
     .s6-btn a{
-      /* bottom: 34%; */
-      /* left: 10%; */
       background-color: #fff;
       border: 1px solid #ccc;
       color: #333333;

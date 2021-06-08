@@ -122,7 +122,7 @@
 
 .menulist-bg{
   width: 120vw;
-  height: 75vh;
+  height: 100vh;
   background-color: black;
   z-index: 100;
   position: absolute;
@@ -296,14 +296,15 @@
 .menulist #check:checked + label span::before{
   transform: rotate(-45deg);
   bottom: 11px;
-  right: 30px;
+  right: 32px;
   z-index: 999;
+  border-bottom: 3px solid #ccc;
 }
 
 .menulist #check:checked + label span::after{
   transform: rotate(45deg);
   bottom: 10px;
-  right: 15px;
+  right: 17px;
   border-bottom: 3px solid #ccc;
   z-index: 999;
 }
