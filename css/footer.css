@@ -232,7 +232,7 @@ a.hlbtn, button.hlbtn{
 
   .footer .newsletter p{
     font-size: 12px;
-    line-height: 25px;
+    line-height: 20px;
   }
 
   .footer .site, .order-support{
@@ -261,17 +261,19 @@ a.hlbtn, button.hlbtn{
   .newsletter .newsletter-btn input[type='text']{
     border: none;
     height: 30px;
-    width: 250px;
+    width: 70%;
     padding-left: 10px;
-    margin-bottom: 5px;
+    /* margin-bottom: 5px; */
   }
 
   .newsletter .newsletter-btn input[type='submit']{
     border:none;
     height: 30px;
-    width: 60px;
+    width: auto;
     background-color: #fff;
     cursor: pointer;
+    font-size: 12px;
+    padding: 5px 10px;
   }
 
   .newsletter p{
