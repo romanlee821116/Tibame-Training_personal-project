@@ -32,6 +32,7 @@
            $('.cart3-payment-credit input').each(function(){
              if($(this).val() == ''){
                $(this).css({'border' : '1.5px solid red'});
+               event.preventDefault();
              }
            })
           }

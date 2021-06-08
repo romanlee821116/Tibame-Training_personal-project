@@ -201,6 +201,12 @@ z-index: 99;
   transition: .3s;
 }
 
+@media screen and (max-width: 767px){
+  .cart3-orderconfirm{
+    width: 90%;
+  }
+}
+
 .cart3-orderconfirm .fa-check-circle{
   color: #EA7500;
   font-size: 60px;

@@ -14,6 +14,7 @@ document.addEventListener('click', function(e){
     let final_total = parseInt(current_total) - parseInt(this_price);
     // let header_itemnum = parseInt(document.getElementById('cartpop-itmenum').innerText);
     let totalamout = document.querySelector('.totalamout');
+    console.log(totalamout.innerHTML)
 
     if(parseInt(span.innerText)>1){  //若產品數量大於一
       span.innerText = parseInt(span.innerText) - 1;
@@ -79,14 +80,79 @@ document.addEventListener('click', function(e){
       }
     });
     localStorage.setItem('tasks', JSON.stringify(tasks));
+  }
+});
+//產品詳細窗更新==================================================================
+let buy_item_list =[];
+document.addEventListener('click', function(e){
+  if(e.target.closest('div').classList.contains('add-to-cart')){
+    let item_name = e.target.closest('.product-details-txt').querySelector('.item_name').innerText;
+    let item_value = e.target.closest('.product-details-txt').querySelector('.cost').getAttribute('data-id');
+    let item_num = e.target.closest('.product-details-txt').querySelector('#buynum').innerText;
+    let item_img = e.target.closest('.product-details').querySelector('.img').getAttribute('src');
+    let tasks = JSON.parse(localStorage.getItem('tasks'));
 
+    if(buy_item_list.indexOf(item_name) == -1){
+      window.scrollTo({top: 0, right: 0, behavior: 'smooth'});
+      // document.getElementById('cartpop-itmenum').innerText = header_itemnum + 1;
+      let current_total = document.querySelector('.cartpop-total').innerText;
+      // 購物車div
+        let cart_div = `
+        <div class="cartpop-item">
+          <div class="cartpop-item-pic">
+            <img src="${item_img}" alt="">
+          </div>
+          <div class="cartpop-item-txt">
+            <h4 class='item_name'>${item_name}</h4>
+            <h4>$${item_value}</h4>
+            <p class='cost' data-id='${item_value}'>$${item_value}</p>
+            <div class="cartpop-item-txt-num">
+              <button type="button" name="button" class='minus'><i class="fas fa-minus"></i></button>
+              <span class='buynum'>${item_num}</span>
+              <button type="button" name="button" class='plus'><i class="fas fa-plus"></i></button>
+            </div>
+          </div>
+          <div class="cartpop-remove">
+            <button type="button" name="button" class='cartpop-remove-btn'><i class="fas fa-times-circle"></i></button>
+          </div>
+        </div>
+        `
+        let cartpop_itemlist = document.getElementById('cartpop-itemlist');
+        cartpop_itemlist.insertAdjacentHTML('afterbegin', cart_div);
+        buy_item_list.push(item_name);
+        let final_total =  parseInt(current_total) + parseInt(item_value)*parseInt(item_num);
+        console.log(final_total);
+        //更新總金額
+        document.querySelector('.cartpop-total').innerText = final_total
+      // 儲存至localstorage
+        let task = {
+          'item_name' : item_name,
+          'item_price' : item_value,
+          'item_img' : item_img,
+          'item_num' : item_num,
+          'item_total' : item_value,
+        };
+        let tasks = JSON.parse(localStorage.getItem('tasks'));
+        if(tasks){
+          tasks.unshift(task);
+        }else{
+          tasks = [task];
+        }
+        localStorage.setItem('tasks', JSON.stringify(tasks));
+    }else{
+      window.alert('This item is already in shopping cart');
+    }
+    e.preventDefault();
   }
 })
 
-// 產品刪除總金額更新=========================================
+
+// 產品刪除總金額更新==============================================================
 document.addEventListener('click', function(e){
   if(e.target.classList.contains('fa-times-circle')){
     console.log('del run');
+    
+
     let current_total = document.querySelector('.cartpop-total').innerText;
     let this_name = e.target.closest('.cartpop-item').querySelector('.item_name').innerText;
     let this_price = e.target.closest('.cartpop-item').querySelector('.cost').getAttribute('data-id');
@@ -95,26 +161,25 @@ document.addEventListener('click', function(e){
     // let header_itemnum = parseInt(document.getElementById('cartpop-itmenum').innerText);
     let totalamout = document.querySelector('.totalamout');
     let deletitem = document.querySelectorAll('.cartpop-item');
-    console.log(deletitem.length);
+    
     // 開始做事
     if(confirm('Sure to delete this item?') == true){
+      buy_item_list.forEach(function(item, index, arr){
+        if(item == this_name){
+          arr.splice(index, 1);
+        }
+      })
       document.querySelector('.cartpop-total').innerText = parseInt(current_total) - remove_final;
-
-
       deletitem.forEach((item, i) => {
         if(item.querySelector('.item_name').innerText ==  this_name){
           deletitem[i].remove();
         }
       });
-
-
-
       // e.target.closest('.cartpop-item').remove();
       let totalamout = document.querySelector('.totalamout');
       if(totalamout){
         document.querySelector('.totalamout').innerHTML = '$' + `${parseInt(current_total) - remove_final}`;
       }
-
       //localstorage更新
       let tasks = JSON.parse(localStorage.getItem('tasks'));
       let update_tasks=[];
@@ -130,7 +195,7 @@ document.addEventListener('click', function(e){
 })
 
 // 購物車新增================================================================
-let buy_item_list =[];
+
 $('i.fa-cart-plus').click(function(e){
   $('div.cartpop').addClass('cartpopshow');
   $('i.fa-shopping-cart').addClass('popcartbtn-clicked');
@@ -302,10 +367,11 @@ function get_tasks(){
     if(cart_productinfo){
       console.log('in product page now');
       cart_productinfo.innerHTML = list_content;
+      document.querySelector('.totalamout').innerHTML = '$' + `${current_total}`;
       let finalamount = document.querySelector('.finalamount');
       if(finalamount){
-        document.querySelector('.totalamout').innerHTML = '$' + `${current_total}`;
-        document.querySelector('.totalamout-1').innerHTML = '$' + `${current_total}`;
+        
+        document.querySelector('.totalamout-1').innerHTML = '$' + `${parseInt(current_total)+120}`;
         document.querySelector('.finalamount').innerHTML = '$' +`${parseInt(current_total)+120}`;
         $('.discount_btn').on('click', function(e){
           // console.log($('.cart2-discount-num'))
@@ -331,12 +397,6 @@ function get_tasks(){
         }
       })
     };
-    // $('.cart2-removedisc').on('click', function(e){
-    //   console.log('run remove dis');
-    //   e.preventDefault;
-    //   $('.cart2-discount-num').remove();
-    //   document.querySelector('.finalamount').innerHTML = '$' +`${parseInt(current_total)+120}`;
-    // })
 
   }
 }
@@ -430,5 +490,43 @@ document.addEventListener('click', function(e){
   }
 })
 
-//
+//cart2 檢查input
+document.addEventListener('click', function(e){
+  let count = 0;
+  if(e.target.classList.contains('cart2-continue')){
+    let input_text = document.querySelectorAll("input[type=text]"); 
+    let input_radio = document.querySelectorAll("input[type=radio]"); 
+    console.log($('.cart2-left input[type=text]').length);
+    $('.cart2-left input[type=text]').each(function(){
+      let value = $(this).val();
+      if(value!=''){
+        count +=1;
+      }
+    })
+    //
+    if(count==6){
+      window.location.href = "../cart3/cart3.html";
+    }else{
+      window.alert('Please complete all required fields');
+      $('.cart2-left input[type=text]').each(function(){
+        let value = $(this).val();
+        if(value==''){
+          $(this).css({'border' : '1.5px solid red'});
+          e.preventDefault();
+        }
+      })
+    }
+  };  
+})
 
+// function cart2confirm(){
+//   console.log($('cart2-left input[type=text]').length);
+//   let count = 0;
+//   $('cart2-left input[type=text]').each(function(){
+//     let value = $(this).val();
+//     if(value!=''){
+//       count +=1;
+//     }
+//   });
+//   if(count==6)
+// }
