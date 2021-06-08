@@ -431,10 +431,4 @@ document.addEventListener('click', function(e){
 })
 
 //
-document.addEventListener('click', function(e){
-  if(e.target.closest('div').classList.contains('menulist')){
-    
-    $(document).css({'overflow-y':'hidden'});
-    console.log('burger');
-  }
-})
+

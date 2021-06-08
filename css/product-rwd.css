@@ -204,7 +204,7 @@ body{
   position: absolute;
   border: 1px solid #888;
   border-radius: 10px;
-  width: 80%;
+  width: 90%;
   display: flex;
   max-width: 860px;
   height: 500px;
@@ -366,7 +366,7 @@ body{
   }
   /* zoom==================== */
   .product-details-txt{
-    width: 60%;
+    width: 100%;
     margin: 0 auto;
     padding: 20px;
     display: block;

@@ -1586,9 +1586,11 @@
       position: fixed;
       width: 18px;
       height: 25px;
-      border-bottom: 3px solid #fff;
-      margin-top: -16px !important;
-      margin-left: 5px;
+      border-bottom: 3px solid red;
+      /* margin-top: -16px !important;
+      margin-left: 5px; */
+      top: -8px; 
+      right: 30px;
       z-index: 999;
       cursor: pointer;
       transition: .3s;
@@ -1600,8 +1602,10 @@
       width: 18px;
       height: 25px;
       border-bottom: 3px solid #fff;
-      margin-top: -10px !important;
-      margin-left: 5px;
+      /* margin-top: -10px !important;
+      margin-left: 5px; */
+      top: 0px;
+      right: 30px;      
       z-index: 999;
       cursor: pointer;
       transition: .3s;
@@ -1624,8 +1628,7 @@
     .menulist .menuhamburger li{
       /* margin-left:-250px; */
       margin-top: 10px;
-
-      transform: translateX(-100%);
+      transform: translateX(-90%);
       width: 300px;
       padding: 15px;
       text-align: right;
@@ -1660,16 +1663,20 @@
 
     .menulist #check:checked + label span::before{
       transform: rotate(-45deg);
-      margin-top: -10px !important;
-      margin-left: -3.5px;
-      border-bottom: 3px solid #fff;
+      /* margin-top: -10px !important;
+      margin-left: -3.5px; */
+      border-bottom: 3px solid blue;
+      right: 38px;
+      top: 0px;
       z-index: 999;
     }
 
     .menulist #check:checked + label span::after{
       transform: rotate(45deg);
-      margin-top: -10px;
-      margin-left: 15px;
+      /* margin-top: -10px;
+      margin-left: 15px; */
+      right: 20px;
+      top: 0px;
       border-bottom: 3px solid #fff;
       z-index: 999;
     }
@@ -2237,7 +2244,7 @@
       line-height: 25px;
       padding: 5px 10px;
       left: 50%;
-      bottom: 4vh;
+      bottom: 10vh;
     }
 
     .lego-pic-right, .lego-pic-left{
