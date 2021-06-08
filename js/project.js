@@ -141,9 +141,7 @@ $('i.fa-cart-plus').click(function(e){
   // let header_itemnum = parseInt(document.getElementById('cartpop-itmenum').innerText);
   let item_num = 1;
   let tasks = JSON.parse(localStorage.getItem('tasks'));
-  tasks.forEach((item, i) => {
-
-  });
+  
 
 
 
@@ -429,5 +427,14 @@ document.addEventListener('click', function(e){
 document.addEventListener('click', function(e){
   if(e.target.classList.contains('fb')){
     window.open('https://www.facebook.com/');
+  }
+})
+
+//
+document.addEventListener('click', function(e){
+  if(e.target.closest('div').classList.contains('menulist')){
+    
+    $(document).css({'overflow-y':'hidden'});
+    console.log('burger');
   }
 })
