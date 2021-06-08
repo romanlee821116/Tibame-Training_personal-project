@@ -522,9 +522,24 @@ document.addEventListener('click', function(e){
 //
 document.addEventListener('click', function(e){
   if(e.target.classList.contains('menu-span')){
-    console.log('fre')
+    // console.log('fre')
     $('div.wrap').toggleClass('freeze');
     $('body').toggleClass('freeze');
   }
 })
 
+
+$('.menu-span').click(function(){
+  if(!$('#check').prop('checked')){    
+    for(let i =0; i<8; i++){
+      let a = document.querySelectorAll('.menuhamburger_li');
+      let temp = i;
+      setTimeout(function(){
+        // $('.menuhamburger_li:nth-child('+temp+')').css({'opacity':'1'})
+        $('.menuhamburger_li:nth-child('+temp+')').addClass('showli')
+      }, 200*(i+1));
+    }
+  }else{
+      $('.menuhamburger_li').css({'opacity':'0'});    
+  }
+})
