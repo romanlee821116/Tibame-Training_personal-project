@@ -265,17 +265,24 @@
   padding: 0px;
   text-align: right;
   z-index: 50;
+  /* display: none; */
+  opacity: 0;
+  transition: .3s;
+}
+
+.showli{
+  opacity: 1;
 }
 
 .menulist .menuhamburger li a{
   color: #fff;
-  font-size: 32px;
+  font-size: 40px;
   z-index: 999;
   position: relative;
   display: block;
   width: 100%;
   transition: .3s;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
 }
 
 .menulist .menuhamburger li:hover a{

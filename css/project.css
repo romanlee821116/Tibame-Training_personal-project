@@ -28,6 +28,12 @@
     /* margin-top: -5px; */
   }
 
+  .loader-inner {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+  }
+
   /* s1 setting */
   .s1{
     width: 100%;
