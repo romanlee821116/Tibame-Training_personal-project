@@ -321,26 +321,11 @@
     z-index: 2;
   }
 
-  /* .s2-about-txt::before{
-    content: '.......................................................................';
-    font-size: 20px;
-    height: 10px;
-    color: #fa9800;
-    letter-spacing: 5px;
-    position: absolute;
-    left: 40px;
-    top: -30px;
-    opacity: .5;
-  } */
 
   div.s2-about-txt a{
     color: #ccc;
-    /* margin-top: 20px; */
-    /* position: relative; */
-    /* right: 10%; */
     font-size: 1.6em;
     display: block;
-    /* margin-left: 50vw; */
     padding-right: 10vw;
     text-align: right;
   }
