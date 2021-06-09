@@ -469,7 +469,7 @@ document.addEventListener('click', function(e){
     let navbar_signin = $('.fa-search').closest('li').next().find('a');
     window.alert('Login success');
     $('.fa-user').remove();
-    navbar_signin.text('ACCOUNT');
+    navbar_signin.text('Tibame');
   }
 })
 

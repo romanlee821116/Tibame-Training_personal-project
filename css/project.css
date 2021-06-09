@@ -1167,8 +1167,8 @@
     font-size: 45px;
     font-weight: bold;
     position: absolute;
-    bottom: 50px;
-    left: -5px;
+    bottom: 60px;
+    left: 5px;
     line-height: 60px;
     color: #fff;
   }
@@ -1285,7 +1285,7 @@
     left: -250px;
     top: 150px;
     transform: rotate(-90deg);
-    z-index: 999;
+    z-index: 9;
   }
 
   .s7-artists-btn{
@@ -1849,7 +1849,7 @@
     .s2-about{
       width: 100%;
       max-width: 1400px;
-      /* height: 100vh; */
+      height: 100vh;
       background-color: #171717;
       display: flex;
       flex-direction: column;
@@ -1989,7 +1989,7 @@
       opacity: .5;
       position: relative;
       right: 0vw;
-      bottom: 0vh;
+      bottom: 5vh;
     }
     /* s3 opendoor setting */
     .s3-opendoor{
@@ -2062,7 +2062,7 @@
     .s4-news-item{
       width: 50vw;
       max-width: 300px;
-      padding: 20px;
+      padding: 25px 0px;
       height: 300px;
       position: relative;
       transition: .3s;
@@ -2091,8 +2091,8 @@
     }
 
     .s4-news-item-img{
-      height: 25vw;
-      width: 25vw;
+      height: 40vw;
+      width: 40vw;
       max-width: 240px;
       max-height: 240px;
       overflow: hidden;
@@ -2125,7 +2125,7 @@
       line-height: 25px;
       margin: auto;
       text-align: left;
-      width: 25vw;
+      width:40vw;
     }
 
     .s4-bigword h1{
@@ -2331,8 +2331,8 @@
     }
 
     .s6-newarrivals-item1, .s6-newarrivals-item2, .s6-newarrivals-item3, .s6-newarrivals-item4{
-      width: 35vw;
-      height: 35vw;
+      width: 40vw;
+      height: 40vw;
       max-width: 350px;
       max-height: 350px;
       border-radius: 50%;
@@ -2484,8 +2484,8 @@
 
     .s6-btn{
       position: absolute;
-      left: 5%;
-      /* transform: translateX(-50%); */
+      left: 50%;
+      transform: translateX(-50%);
       bottom: 20vh;
       width: 120px;
       /* height: 30px; */
@@ -2497,6 +2497,7 @@
       color: #333333;
       width: 120px;
       text-align: center;
+      height: 35px;
       padding: 10px;
       font-weight: bold;
       transition: .3s;
@@ -2567,9 +2568,9 @@
       font-size: 5vw;
       font-weight: bold;
       position: absolute;
-      top: 0;
+      top: 5px;
       left: 10vw;
-      line-height: 50px;
+      line-height: 30px;
       color: #fff;
     }
     .s7-artists-item1-pic{
@@ -2578,7 +2579,7 @@
       max-width: 450px;
       max-height: 450px;
       margin-left: 15vw;
-      align-self: flex-end;
+      align-self: center;
     }
     .s7-artists-item1-pic img{
       width: 100%;
@@ -2597,8 +2598,8 @@
       display: flex;
       flex: 1;
       transition: 3s;
-      border-top: 2px solid rgba(255, 255, 255,.5);
-      border-bottom: 2px solid rgba(255, 255, 255,.5);
+      border-top: 2px dashed rgba(255, 255, 255, .3);
+      border-bottom: 2px dashed rgba(255, 255, 255, .3);
       padding-bottom: 10px;
       /* border: 1px solid green; */
     }
@@ -2636,9 +2637,9 @@
       font-size: 5vw;
       font-weight: bold;
       position: absolute;
-      top: 0;
+      top: 10px;
       left: 10vw;
-      line-height: 50px;
+      line-height: 30px;
       color: #fff;
     }
     .s7-artists-item2-pic{
@@ -2647,7 +2648,7 @@
       max-width: 450px;
       max-height: 450px;
       margin-left: 15vw;
-      align-self: flex-end;
+      align-self: center;
     }
     .s7-artists-item2-pic img{
       width: 100%;
@@ -2701,9 +2702,9 @@
       font-size: 5vw;
       font-weight: bold;
       position: absolute;
-      top: 0;
+      top: 10px;
       left: 10vw;
-      line-height: 50px;
+      line-height: 30px;
       color: #fff;
     }
     .s7-artists-item3-pic{
@@ -2712,7 +2713,7 @@
       max-width: 450px;
       max-height: 450px;
       margin-left: 15vw;
-      align-self: flex-end;
+      align-self: center;
       /* margin-top: 50px; */
     }
     .s7-artists-item3-pic img{
