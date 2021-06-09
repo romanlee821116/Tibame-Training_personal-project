@@ -2609,12 +2609,13 @@
       color: #fff;
     }
     .s7-artists-item1-pic{
-      width: 30vw;
-      height: 30vw;
+      width: 40vw;
+      height: 40vw;
+      transform: translateY(20%);
+      margin-left: 13vw;
       max-width: 450px;
-      max-height: 450px;
-      margin-left: 15vw;
-      align-self: center;
+      max-height: 450px;      
+      align-self: center;      
     }
     .s7-artists-item1-pic img{
       width: 100%;
@@ -2679,11 +2680,12 @@
       color: #fff;
     }
     .s7-artists-item2-pic{
-      width: 30vw;
-      height: 30vw;
+      width: 40vw;
+      height: 40vw;
+      transform: translateY(20%);
+      margin-left: 13vw;
       max-width: 450px;
       max-height: 450px;
-      margin-left: 15vw;
       align-self: center;
     }
     .s7-artists-item2-pic img{
@@ -2745,11 +2747,12 @@
       color: #fff;
     }
     .s7-artists-item3-pic{
-      width: 30vw;
-      height: 30vw;
+      width: 40vw;
+      height: 40vw;
+      transform: translateY(20%);
+      margin-left: 13vw;
       max-width: 450px;
       max-height: 450px;
-      margin-left: 15vw;
       align-self: center;
       /* margin-top: 50px; */
     }
