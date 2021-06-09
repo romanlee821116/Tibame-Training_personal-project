@@ -63,20 +63,6 @@
     </script>
 
     <script type="text/javascript">
-      // function legocontinue(){        
-      //   if(document.getElementById('hairpic').src|document.getElementById('headpic').src|document.getElementById('bodypic').src|document.getElementById('legpic').src=='http://127.0.0.1:3000/html/pic/whitebg.png'){
-      //     if(window.confirm('You have not selected all the parts required for a figure, are you sure you wish to continue?')){
-      //       $('.legoconfirm').css({'display':'block'});
-      //       $('html, body').scrollTop(450);
-      //       $('.lego-whitebg').css({'display':'block'});
-      //     }
-      //   }else{
-      //     $('.legoconfirm').css({'display':'block'});
-      //     $('html, body').scrollTop(450);
-      //     $('.lego-whitebg').css({'display':'block'});
-      //   }
-      // }
-
       function legoback(){
         $('.legoconfirm').css({'display':'none'});
         $('.lego-whitebg').css({'display':'none'});
@@ -88,6 +74,10 @@
         document.getElementById('headpic').src='../pic/whitebg.png';
         document.getElementById('bodypic').src='../pic/whitebg.png';
         document.getElementById('legpic').src='../pic/whitebg.png';
+        document.getElementById('hairpic-confirm').src='../pic/whitebg.png';
+        document.getElementById('headpic-confirm').src='../pic/whitebg.png';
+        document.getElementById('bodypic-confirm').src='../pic/whitebg.png';
+        document.getElementById('legpic-confirm').src='../pic/whitebg.png';
         // $('.legoconfirm-item').find('img').attr('src','../pic/whitebg.png');
         $('.hairitem').removeClass('choosen');
         $('.headitem').removeClass('choosen');

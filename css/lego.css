@@ -27,7 +27,7 @@ body{
 /* legoleft================================ */
 .lego-banner{
   width: 100%;
-  height: 40vh;
+  height: 50vh;
   background: url('./../html/pic/lego-bg.png');
   background-position: center;
   background-size: cover;

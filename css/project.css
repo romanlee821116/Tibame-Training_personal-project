@@ -25,7 +25,16 @@
     margin: 0 auto;
     position: relative;
     background-color: #171717;
-    /* margin-top: -5px; */
+  }
+
+  .freeze{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden !important;
+  }
+
+  .show{
+    display: none;
   }
 
   .loader-inner {
@@ -248,8 +257,7 @@
     width: 100vw;
     /* border: 10px solid red; */
     position: absolute;
-    /* left:-1150px; */
-    top: -20px;
+    top: 0px;
     left: 0;
     opacity: 0;
     transform: translateX(-100%);
@@ -259,7 +267,6 @@
   .menulist-img img{
     height: 100%;
     width: auto;
-    /* z-index: 999; */
     opacity: .7;
     transition: 15s;
     display: block;
@@ -1548,21 +1555,14 @@
       width: 100vw;
       position: relative;
       font-size: 10px;
-      /* background-color: #fa0; */
       overflow-x: hidden;
       overflow-y: scroll;
-
-      /* overflow: hidden; */
     }
 
     .wrap{
       max-width: 100%;
       position: relative;
       background-color: #171717;
-      /* overflow-y: scroll;
-      overflow-x: hidden; */
-      /* overflow: hidden; */
-      /* margin-top: -5px; */
     }
 
 
@@ -1578,14 +1578,11 @@
       background-attachment:fixed;
       background-position: center;
       position: relative;
-      /* overflow-y: : scroll;
-      overflow-x: hidden; */
     }
 
     .s1-slogan{
       width: 100%;
       text-align: center;
-      /* border: 1px solid red; */
       position: absolute;
       top: 50%;
       left: 50%;

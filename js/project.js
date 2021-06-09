@@ -420,12 +420,10 @@ function get_tasks(){
             if(!discount){
               discount = [discount_num];
             }
-            localStorage.setItem('discount', JSON.stringify(discount));
-
-            
-            
+            localStorage.setItem('discount', JSON.stringify(discount));                    
+          }else{
+            window.alert('Discount already exists')
             e.preventDefault();
-            
           }
         });
         
@@ -537,7 +535,6 @@ $('.fa-chevron-down').click(function(){
 
 //sing in button更改內容
 let signin_btn = document.getElementsByClassName('signin-btn')[0];
-
 document.addEventListener('click', function(e){
   if(e.target.classList.contains('signin-btn')){
     let navbar_signin = $('.fa-search').closest('li').next().find('a');
@@ -563,9 +560,7 @@ document.addEventListener('click', function(e){
 document.addEventListener('click', function(e){
   let count = 0;
   if(e.target.classList.contains('cart2-continue')){
-    // console.log($('.cart2-shippingaddress').length);
     let input_text = document.querySelectorAll("input[type=text]"); 
-    // console.log($('.cart2-left input[type=text]').length);
     $('.cart2-left input[type=text]').each(function(){
       let value = $(this).val();
       if(value!=''){
@@ -576,6 +571,7 @@ document.addEventListener('click', function(e){
     if(count==$('.cart2-left input[type=text]').length){
       if(!$('.shipbtn').prop('checked') && !$('.pickupbtn').prop('checked')){
         window.alert('Please select your delivery method');
+        e.preventDefault()
       }else{
         window.location.href = "../cart3/cart3.html";
       };
@@ -596,8 +592,10 @@ document.addEventListener('click', function(e){
 //漢堡凍結背景
 document.addEventListener('click', function(e){
   if(e.target.classList.contains('menu-span')){
+    console.log('freeze')
     $('div.wrap').toggleClass('freeze');
     $('body').toggleClass('freeze');
+    $('#section07').toggleClass('show');
   }
 })
 
@@ -615,9 +613,7 @@ document.addEventListener('click', function(e){
 })
 
 document.addEventListener('click', function(e){
-  if(e.target.classList.contains('shipbtn')){    
-    
-
+  if(e.target.classList.contains('shipbtn')){  
     let text=`
     <div class="cart2-shippingaddress">
             <h3>SHIPPING ADDRESS</h3>
@@ -656,11 +652,12 @@ document.addEventListener('click', function(e){
    
 
     if(hairpic_confirm=='../pic/whitebg.png'|headpic_confirm=='../pic/whitebg.png'|bodypic_confirm=='../pic/whitebg.png'|legpic_confirm=='../pic/whitebg.png'){
-      if(window.confirm('You have not selected all the parts required for a figure, are you sure you wish to continue?')){
-        $('.legoconfirm').css({'display':'block'});
-        $('html, body').scrollTop(450);
-        $('.lego-whitebg').css({'display':'block'});
-      }
+      // if(window.confirm('You have not selected all the parts required for a figure, are you sure you wish to continue?')){
+      //   $('.legoconfirm').css({'display':'block'});
+      //   $('html, body').scrollTop(450);
+      //   $('.lego-whitebg').css({'display':'block'});
+      // }
+      window.alert('Please select all the parts required for a figure')
     }else{
       $('.legoconfirm').css({'display':'block'});
       $('html, body').scrollTop(450);
