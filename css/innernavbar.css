@@ -234,7 +234,6 @@
   position: absolute;
   right: 20px;
   top: 0px;
-  /* border: 1px solid blue; */
   display: block;
 }
 
@@ -246,8 +245,6 @@
   border-bottom: 3px solid #ccc;
   bottom: 20px;
   right: 25px;
-  /* margin-top: 0px; */
-  /* margin-left: 10px; */
   z-index: 999;
   cursor: pointer;
   transition: .3s;
@@ -259,8 +256,6 @@
   width: 25px;
   height: 25px;
   border-bottom: 3px solid #ccc;
-  /* margin-top: -16px;
-  margin-left: 10px; */
   bottom: 10px;
   right: 25px;
   z-index: 999;
@@ -322,7 +317,7 @@
 .menulist #check:checked + label span::before{
   transform: rotate(-45deg);
   bottom: 11px;
-  right: 32px;
+  right: 33px;
   z-index: 999;
   border-bottom: 3px solid #ccc;
 }

@@ -224,6 +224,23 @@
     z-index: 0;
   }
 
+  .menu-ul .li_cart{
+    position: relative;
+  }
+  
+  .menu-ul .li_cart .li_cart_num{
+    position: absolute;
+    border: 1.5px solid #fa9800;
+    background-color: #fa9800;
+    color: #fff;
+    border-radius: 50%;
+    top: -50%;
+    right: -50%;
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    display: none;
+  }
   
 
   .menulist-img{
@@ -1655,6 +1672,24 @@
       /* border: 1px solid blue; */
     }
 
+    .menu-ul .li_cart{
+      position: relative;
+    }
+    
+    .menu-ul .li_cart .li_cart_num{
+      position: absolute;
+      border: 1.5px solid #fa9800;
+      background-color: #fa9800;
+      color: #fff;
+      border-radius: 50%;
+      top: -50%;
+      right: -200%;
+      width: 26px;
+      height: 26px;
+      text-align: center;
+      display: none;
+    }
+
     .menulist .menuhamburger li{
       /* margin-left:-250px; */
       margin-top: 10px;
@@ -1807,7 +1842,7 @@
     .navbar ul{
       margin-left: 0;
       position: absolute;
-      right: 60px;
+      right: 70px;
       top: 6px;
     }
 
@@ -2769,7 +2804,7 @@
     .s8-container{
       width: 100%;
       max-width: 1400px;
-      padding-top: 100px;
+      padding-top: 20px;
       background-color: transparent;
       position: relative;
       justify-content: space-around;

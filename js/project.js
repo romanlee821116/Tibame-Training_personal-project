@@ -377,11 +377,16 @@ function get_tasks(){
       </div>
       `;
     });
+    console.log('目前產品總數'+current_item_num);
 
     document.querySelector('.cartpop-total').innerHTML = current_total;
     cartpop_itemlist.innerHTML = list_content;
-    document.querySelector('.li_cart_num').innerText =  current_item_num;
-
+    //navbar產品數量更新
+    if(current_item_num>0){
+      document.querySelector('.li_cart_num').style.display = 'block';
+      document.querySelector('.li_cart_num').innerText =  current_item_num; 
+    }
+    //判斷是否在產品頁
     if(cart_productinfo){
       console.log('in product page now');
       cart_productinfo.innerHTML = list_content;
