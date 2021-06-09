@@ -1688,6 +1688,7 @@
       height: 26px;
       text-align: center;
       display: none;
+      line-height: 20px;
     }
 
     .menulist .menuhamburger li{
@@ -1900,7 +1901,7 @@
       height: auto;
       margin-top: 50vw;
       text-align: left;
-      padding: 40px;
+      padding: 10px 40px;
       line-height: 35px;
       position: relative;
       z-index: 2;
@@ -2252,7 +2253,7 @@
       position: relative;
       width: 100%;
       padding-top: 0px;
-      height: 70vh;
+      height: 75vh;
       overflow: hidden;
       background-color: #f5ca02;
       background-image: url('../html/pic/lego_bg-1.png');
@@ -2536,7 +2537,8 @@
       padding: 10px;
       font-weight: bold;
       transition: .3s;
-      display: block;      
+      display: block; 
+      margin-bottom: 20px;     
     }
 
     .s6-btn:hover a{
@@ -2594,6 +2596,7 @@
     .s7-artists-item1 h3{
       color: #fa9800;
       font-size: 5em;
+      padding: 5px;
       position: relative;
       top: 0px;
       right: 0px;
@@ -2663,6 +2666,7 @@
     .s7-artists-item2 h3{
       color: #fa9800;
       font-size: 5em;
+      padding: 5px;
       position: relative;
       top: 0px;
       right: 0px;
@@ -2728,6 +2732,7 @@
     .s7-artists-item3 h3{
       color: #fa9800;
       font-size: 5em;
+      padding: 5px;
       position: relative;
       top: 0px;
       right: 0px;

@@ -221,8 +221,9 @@ z-index: 99;
   display: block;
   font-size: 14px;
   transition: .3s;
-  width: 150px;
+  width: 100px;
   margin: 20px auto;
+  border-bottom: 1.5px solid #333333;
 }
 
 .cart3-orderconfirm a:hover{
@@ -239,7 +240,7 @@ z-index: 99;
 }
 
 i.fa-home{
-  color: #171717;
+  color: #ccc;
 }
 
 /* bgblock=================================== */

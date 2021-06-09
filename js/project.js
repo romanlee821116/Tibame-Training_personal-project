@@ -375,7 +375,7 @@ function get_tasks(){
       </div>
       `;
     });
-    console.log('目前產品總數'+current_item_num);
+    // console.log('目前產品總數'+current_item_num);
 
     document.querySelector('.cartpop-total').innerHTML = current_total;
     cartpop_itemlist.innerHTML = list_content;
@@ -396,7 +396,6 @@ function get_tasks(){
         document.querySelector('.finalamount').innerHTML = '$' +`${parseInt(current_total)+120}`;
         //優惠按鈕
         $('.discount_btn').on('click', function(e){
-          // console.log($('.cart2-discount-num'))
           if($('.cart2-discount-num').length==0){
             let cart2_shipping_num = document.getElementsByClassName('cart2-shipping-num')[0];
             let text = `<div class ='cart2-discount-num'>
@@ -422,6 +421,8 @@ function get_tasks(){
               discount = [discount_num];
             }
             localStorage.setItem('discount', JSON.stringify(discount));
+
+            
             
             e.preventDefault();
             
@@ -456,10 +457,11 @@ function get_tasks(){
         `;
           value += item.discount_code;
         })
-          console.log(text);
-          console.log(value);
+          
           cart2_shipping_num.insertAdjacentHTML('afterend', text);
           document.querySelector('.disc_inp').value = value;
+          document.querySelector('.totalamout-1').innerHTML = '$' + `${parseInt(current_total)+120-parseInt(current_total)*0.1}`;
+          document.querySelector('.finalamount').innerHTML = '$' +`${parseInt(current_total)+120-parseInt(current_total)*0.1}`;
 
       }
     };
