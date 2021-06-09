@@ -589,3 +589,30 @@ document.addEventListener('click', function(e){
     cart2_deliverymethod.insertAdjacentHTML('afterend', text);
   }
 })
+
+//lego判斷
+document.addEventListener('click', function(e){
+  if(e.target.classList.contains('lego_add_cart')){
+    
+    let hairpic_confirm = document.getElementById('hairpic-confirm').getAttribute('src');
+    let headpic_confirm = document.getElementById('headpic-confirm').getAttribute('src');
+    let bodypic_confirm = document.getElementById('bodypic-confirm').getAttribute('src');
+    let legpic_confirm = document.getElementById('legpic-confirm').getAttribute('src');
+    console.log(headpic_confirm);
+    console.log(hairpic_confirm);
+    console.log(bodypic_confirm);
+    console.log(legpic_confirm);
+
+    if(hairpic_confirm=='../pic/whitebg.png'|headpic_confirm=='../pic/whitebg.png'|bodypic_confirm=='../pic/whitebg.png'|legpic_confirm=='../pic/whitebg.png'){
+      if(window.confirm('You have not selected all the parts required for a figure, are you sure you wish to continue?')){
+        $('.legoconfirm').css({'display':'block'});
+        $('html, body').scrollTop(450);
+        $('.lego-whitebg').css({'display':'block'});
+      }
+    }else{
+      $('.legoconfirm').css({'display':'block'});
+      $('html, body').scrollTop(450);
+      $('.lego-whitebg').css({'display':'block'});
+    }
+  }
+})

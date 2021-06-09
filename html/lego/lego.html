@@ -63,24 +63,19 @@
     </script>
 
     <script type="text/javascript">
-      function legocontinue(){
-        // console.log('第1'+ document.getElementById('hairpic').src);
-        // console.log('第2'+ document.getElementById('headpic').src);
-        // console.log('第3'+ document.getElementById('bodypic').src);
-        // console.log('第4'+ document.getElementById('legpic').src);
-        //
-        if(document.getElementById('hairpic').src|document.getElementById('headpic').src|document.getElementById('bodypic').src|document.getElementById('legpic').src=='http://127.0.0.1:3000/html/pic/whitebg.png'){
-          if(window.confirm('You have not selected all the parts required for a figure, are you sure you wish to continue?')){
-            $('.legoconfirm').css({'display':'block'});
-            $('html, body').scrollTop(450);
-            $('.lego-whitebg').css({'display':'block'});
-          }
-        }else{
-          $('.legoconfirm').css({'display':'block'});
-          $('html, body').scrollTop(450);
-          $('.lego-whitebg').css({'display':'block'});
-        }
-      }
+      // function legocontinue(){        
+      //   if(document.getElementById('hairpic').src|document.getElementById('headpic').src|document.getElementById('bodypic').src|document.getElementById('legpic').src=='http://127.0.0.1:3000/html/pic/whitebg.png'){
+      //     if(window.confirm('You have not selected all the parts required for a figure, are you sure you wish to continue?')){
+      //       $('.legoconfirm').css({'display':'block'});
+      //       $('html, body').scrollTop(450);
+      //       $('.lego-whitebg').css({'display':'block'});
+      //     }
+      //   }else{
+      //     $('.legoconfirm').css({'display':'block'});
+      //     $('html, body').scrollTop(450);
+      //     $('.lego-whitebg').css({'display':'block'});
+      //   }
+      // }
 
       function legoback(){
         $('.legoconfirm').css({'display':'none'});
@@ -93,6 +88,7 @@
         document.getElementById('headpic').src='../pic/whitebg.png';
         document.getElementById('bodypic').src='../pic/whitebg.png';
         document.getElementById('legpic').src='../pic/whitebg.png';
+        $('.legoconfirm-item').find('img').attr('src','../pic/whitebg.png');
         $('.hairitem').removeClass('choosen');
         $('.headitem').removeClass('choosen');
         $('.bodyitem').removeClass('choosen');
@@ -102,7 +98,9 @@
     <title>SOFUBI STUDIO</title>
   </head>
   <body>
+    
     <div class="wrap">
+      
       <!-- menu=========================== -->
       <div class="menu">
         <div class="menu-content">
@@ -180,7 +178,7 @@
           </div>
           <div class="lego-container-left-btn">
             <button type="button" name="button" onclick="undo()" class='hlbtn'>Undo</button>
-            <button type="button" name="button" onclick="legocontinue()" >Continue</button>
+            <button type="button" name="button" class='lego_add_cart'>Continue</button>
           </div>
         </div>
         <!-- rightboard===================================== -->
@@ -366,8 +364,11 @@
             </div>
           </div>
           <!--  -->
-          <button type="button" name="button"onclick='legoback()' class='hlbtn'>Back</button>
-          <button type="button" name="button" id='lego_add_cart'>Add To Cart</button>
+          <button type="button" name="button" onclick='legoback()' class='hlbtn'>Back</button>
+          <button type="button" name="button" >Add To Cart</button>
+        </div>
+        <!-- whiteBG -->
+        <div class="lego-whitebg">
         </div>
       </div>
       <!-- footer=========================================== -->
@@ -407,9 +408,7 @@
           </p>
         </div>
       </div>
-            <!-- whiteBG -->
-      <div class="lego-whitebg">
-      </div>
+      
     </div>
     <!-- wrap -->
     <!-- cartpop===================================== -->

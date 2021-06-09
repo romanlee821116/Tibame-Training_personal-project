@@ -13,12 +13,15 @@
 body{
   background-color: #fff;
   width: 100%;
+  height: 100%;
+  position: relative;
 }
 
 .wrap{
   width: 100%;
+  height: 100%;
   margin: 0 auto;
-  background-color: #fff;
+  background-color: #fff
   position: relative;
 }
 /* legoleft================================ */
@@ -478,7 +481,7 @@ button{
   }
 
   .fa-check-circle{
-    color: #ea7500;
+    color: #171717;
     font-size: 60px;
     margin-bottom: 20px;
   }
