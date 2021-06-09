@@ -207,9 +207,6 @@ $('i.fa-cart-plus').click(function(e){
   let item_num = 1;
   let tasks = JSON.parse(localStorage.getItem('tasks'));
   
-
-
-
     if(buy_item_list.indexOf(item_name) == -1){
       window.scrollTo({top: 0, right: 0, behavior: 'smooth'});
       // document.getElementById('cartpop-itmenum').innerText = header_itemnum + 1;
@@ -275,8 +272,7 @@ $('#lego_add_cart').click(function(e){
   let item_img = '../pic/completelego.jpg';
   // let header_itemnum = parseInt(document.getElementById('cartpop-itmenum').innerText);
   let item_num = 1;
-  // console.log(buy_item_list);
-  // console.log(item_name);
+
     if(buy_item_list.indexOf(item_name) == -1){
       legonum +=1;
       window.scrollTo({top: 0, right: 0, behavior: 'smooth'});
@@ -393,7 +389,7 @@ function get_tasks(){
         if(e.target.classList.contains('cart2-removedisc')){
           $('.cart2-discount-num').remove();
           document.querySelector('.finalamount').innerHTML = '$' +`${parseInt(current_total)+120}`;
-          event.preventDefault();
+          e.preventDefault();
         }
       })
     };
@@ -414,20 +410,19 @@ $(".policybtn").click(function(){
 $('.popcartbtn').click(function(e){
   $('.cartpop').toggleClass('cartpopshow');
   $('.fa-shopping-cart').toggleClass('popcartbtn-clicked');
-  event.preventDefault();
-  event.stopPropagation();
+  e.preventDefault();
+  e.stopPropagation();
 })
 
 // 購物車取消
-$('.cartpop-close-btn').click(function(){
+$('.cartpop-close-btn').click(function(e){
   $('.cartpop').removeClass('cartpopshow');
   $('.fa-shopping-cart').removeClass('popcartbtn-clicked');
-  event.preventDefault();
+  e.preventDefault();
 })
 
 // 點擊其他區域隱藏購物車跳窗
 $('.wrap').click(function (e) {
-    // console.log(e);
     if(!e.target.classList.contains('fa-cart-plus')){
     var container =$(".cartpop");
     if (!container.is(e.target) && container.has(e.target).length === 0) {
@@ -452,8 +447,8 @@ $('.paypal').click(function(){
   $('.googlepay').removeClass('checked');
   $('.googlepay i').removeClass('checked');
 });
-// RWD
 
+// RWD
 window.onresize = function(){
   if($(window).width()>768){
     $('.cart-right-container').css({'display':'block'});
@@ -477,8 +472,8 @@ document.addEventListener('click', function(e){
     navbar_signin.text('ACCOUNT');
   }
 })
-//創帳號跳轉
 
+//創帳號跳轉
 document.addEventListener('click', function(e){
   if(e.target.classList.contains('google')){
     window.open('https://accounts.google.com/signin/v2/identifier?flowName=GlifWebSignIn&flowEntry=ServiceLogin');
@@ -494,8 +489,9 @@ document.addEventListener('click', function(e){
 document.addEventListener('click', function(e){
   let count = 0;
   if(e.target.classList.contains('cart2-continue')){
+    // console.log($('.cart2-shippingaddress').length);
     let input_text = document.querySelectorAll("input[type=text]"); 
-    console.log($('.cart2-left input[type=text]').length);
+    // console.log($('.cart2-left input[type=text]').length);
     $('.cart2-left input[type=text]').each(function(){
       let value = $(this).val();
       if(value!=''){
@@ -504,7 +500,12 @@ document.addEventListener('click', function(e){
     })
     //
     if(count==$('.cart2-left input[type=text]').length){
-      window.location.href = "../cart3/cart3.html";
+      if(!$('.shipbtn').prop('checked') && !$('.pickupbtn').prop('checked')){
+        window.alert('Please select your delivery method');
+      }else{
+        window.location.href = "../cart3/cart3.html";
+      };
+      
     }else{
       window.alert('Please complete all required fields');
       $('.cart2-left input[type=text]').each(function(){
@@ -521,36 +522,17 @@ document.addEventListener('click', function(e){
 //漢堡凍結背景
 document.addEventListener('click', function(e){
   if(e.target.classList.contains('menu-span')){
-    // console.log('fre')
     $('div.wrap').toggleClass('freeze');
     $('body').toggleClass('freeze');
   }
 })
 
 
-// $('.menu-span').click(function(){
-//   if(!$('#check').prop('checked')){    
-//     for(let i =0; i<8; i++){
-//       let a = document.querySelectorAll('.menuhamburger_li');
-//       let temp = i;
-//       setTimeout(function(){
-//         console.log('run');
-//         $('.menuhamburger_li:nth-child('+temp+')').css({'opacity':'1'})
-//         $('.menuhamburger_li:nth-child('+temp+')').addClass('showli')
-//       }, 200*(i+1));
-//     }
-//   }else{
-//       $('.menuhamburger_li').css({'opacity':'0'});    
-//   }
-// })
 
-//delivery method
+
+//delivery method判斷
 document.addEventListener('click', function(e){
-  if(e.target.classList.contains('pickupbtn')){
-    // $('.cart2-shippingaddress').css({'display':'none'});
-    // $('.cart2-Company').css({'display':'none'});
-    // $('.cart2-address').css({'display':'none'});
-    // $('.cart2-phone').css({'display':'none'});
+  if(e.target.classList.contains('pickupbtn')){    
     $('.cart2-shippingaddress').remove();
     $('.cart2-Company').remove();
     $('.cart2-address').remove();
@@ -560,10 +542,7 @@ document.addEventListener('click', function(e){
 
 document.addEventListener('click', function(e){
   if(e.target.classList.contains('shipbtn')){    
-    // $('.cart2-shippingaddress').css({'display':'block'});
-    // $('.cart2-Company').css({'display':'block'});
-    // $('.cart2-address').css({'display':'block'});
-    // $('.cart2-phone').css({'display':'block'});
+    
 
     let text=`
     <div class="cart2-shippingaddress">
@@ -586,7 +565,9 @@ document.addEventListener('click', function(e){
             <input type="text" name="" value="" placeholder="Phone">
           </div>`
     let cart2_deliverymethod = document.getElementById('delivery');
-    cart2_deliverymethod.insertAdjacentHTML('afterend', text);
+    if($('.cart2-shippingaddress').length==0){
+      cart2_deliverymethod.insertAdjacentHTML('afterend', text);
+    }        
   }
 })
 
@@ -598,10 +579,7 @@ document.addEventListener('click', function(e){
     let headpic_confirm = document.getElementById('headpic-confirm').getAttribute('src');
     let bodypic_confirm = document.getElementById('bodypic-confirm').getAttribute('src');
     let legpic_confirm = document.getElementById('legpic-confirm').getAttribute('src');
-    console.log(headpic_confirm);
-    console.log(hairpic_confirm);
-    console.log(bodypic_confirm);
-    console.log(legpic_confirm);
+   
 
     if(hairpic_confirm=='../pic/whitebg.png'|headpic_confirm=='../pic/whitebg.png'|bodypic_confirm=='../pic/whitebg.png'|legpic_confirm=='../pic/whitebg.png'){
       if(window.confirm('You have not selected all the parts required for a figure, are you sure you wish to continue?')){

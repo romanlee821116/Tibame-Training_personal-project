@@ -101,9 +101,7 @@
 }
 /* choosen btn */
 a.hlbtn, button.hlbtn{
-  /* color: 	#9D9D9D !important;
-  border: none !important;
-  background-color: transparent; */
+  color: #BEBEBE !important;
   background-color: transparent;
   border: none;
 }
@@ -332,6 +330,6 @@ a.hlbtn, button.hlbtn{
   }
 
   a.hlbtn, button.hlbtn{
-    color: #BEBEBE;
+    color: #BEBEBE !important;
   }
 }
