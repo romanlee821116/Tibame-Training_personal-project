@@ -538,9 +538,11 @@ let signin_btn = document.getElementsByClassName('signin-btn')[0];
 document.addEventListener('click', function(e){
   if(e.target.classList.contains('signin-btn')){
     let navbar_signin = $('.fa-search').closest('li').next().find('a');
+    let navbar_signin_li = $('.fa-search').closest('li').next()
     window.alert('Login success');
     $('.fa-user').remove();
-    navbar_signin.text('Tibame');
+    navbar_signin.text('L');
+    navbar_signin_li.addClass('login-icon');
   }
 })
 

@@ -38,6 +38,15 @@
   color: #fff;
 }
 
+.login-icon{
+  background-color: #000;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+}
+
 .menu .menu-request{
   margin-left: 80px;
   border: none;
