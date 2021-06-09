@@ -668,3 +668,28 @@ document.addEventListener('click', function(e){
     }
   }
 })
+
+//news 詳細
+document.addEventListener('click', function(e){
+  if(e.target.closest('div').classList.contains('grid-item')){    
+    let this_img = e.target.previousElementSibling.getAttribute('src'); 
+    let this_txt = e.target.innerHTML
+    let this_high = e.target.closest('div').offsetTop;
+
+    console.log('高度'+this_high);
+    document.querySelector('.news-detailed-img').src=this_img;
+    document.querySelector('.news-detailed-txt').innerHTML = this_txt;
+    document.querySelector('.news-detailed').style.top = `${this_high+100}px`;
+    $('.news-detailed').css({'display':'block'});
+    $('.news-bg').css({'display':'block'});
+    e.preventDefault();
+  }
+})
+
+document.addEventListener('click', function(e){
+  if(e.target.classList.contains('newclose')){
+    $('.news-detailed').css({'display':'none'});
+    $('.news-bg').css({'display':'none'});
+    e.preventDefault();
+  }
+})
