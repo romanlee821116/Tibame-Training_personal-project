@@ -675,8 +675,6 @@ document.addEventListener('click', function(e){
     let this_img = e.target.previousElementSibling.getAttribute('src'); 
     let this_txt = e.target.innerHTML
     let this_high = e.target.closest('div').offsetTop;
-
-    console.log('高度'+this_high);
     document.querySelector('.news-detailed-img').src=this_img;
     document.querySelector('.news-detailed-txt').innerHTML = this_txt;
     document.querySelector('.news-detailed').style.top = `${this_high+100}px`;
