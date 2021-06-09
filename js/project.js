@@ -474,7 +474,7 @@ document.addEventListener('click', function(e){
     let navbar_signin = $('.fa-search').closest('li').next().find('a');
     window.alert('Login success');
     $('.fa-user').remove();
-    navbar_signin.text('Hi, Roman');
+    navbar_signin.text('ACCOUNT');
   }
 })
 //創帳號跳轉
@@ -535,11 +535,12 @@ $('.menu-span').click(function(){
       let a = document.querySelectorAll('.menuhamburger_li');
       let temp = i;
       setTimeout(function(){
+        console.log('run');
         // $('.menuhamburger_li:nth-child('+temp+')').css({'opacity':'1'})
         $('.menuhamburger_li:nth-child('+temp+')').addClass('showli')
       }, 200*(i+1));
     }
   }else{
-      $('.menuhamburger_li').css({'opacity':'0'});    
+      // $('.menuhamburger_li').css({'opacity':'0'});    
   }
 })

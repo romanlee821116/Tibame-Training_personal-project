@@ -147,6 +147,10 @@
   overflow-y: hidden !important;
 }
 
+.showli{
+  opacity: 1;
+}
+
 /* menulist */
 @media screen and (max-width: 875px){
 
@@ -266,17 +270,14 @@
   text-align: right;
   z-index: 50;
   /* display: none; */
-  opacity: 0;
+  opacity: 1;
   transition: .3s;
 }
 
-.showli{
-  opacity: 1;
-}
 
 .menulist .menuhamburger li a{
   color: #fff;
-  font-size: 40px;
+  font-size: 35px;
   z-index: 999;
   position: relative;
   display: block;

@@ -2308,7 +2308,7 @@
       background: linear-gradient(45deg, rgba(250,152,0,.3), rgba(255,255,255,.1));
       border-radius: 50%;
       position: relative;
-      top: -105vw;
+      top: -108vw;
       left: -30vw;
       transition: 1s;
       background-color: transparent;
@@ -2326,7 +2326,6 @@
         top: -1000px;
         left: -5vw;
         transition: 1s;
-        /* border: 1px solid red; */
       }
     }
 
@@ -2394,7 +2393,7 @@
       max-width: 630px;
       max-height: 250px;
       padding: 20px;
-      top: 30vh;
+      top: 35vh;
       right:0px;
       /* border: 1px solid red; */
       text-align: right;
@@ -2437,7 +2436,7 @@
       max-width: 650px;
       min-width: 100%;
       position: absolute;
-      bottom: 25vh;
+      bottom: 15vh;
       right: 0px;
     }
 
@@ -2484,8 +2483,8 @@
 
     .s6-btn{
       position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
+      left: 5%;
+      /* transform: translateX(-50%); */
       bottom: 20vh;
       width: 120px;
       /* height: 30px; */
@@ -2500,7 +2499,7 @@
       padding: 10px;
       font-weight: bold;
       transition: .3s;
-      display: block;
+      display: block;      
     }
 
     .s6-btn:hover a{
