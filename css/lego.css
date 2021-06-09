@@ -305,7 +305,7 @@ button{
     position: sticky;
     display: flex;
     justify-content: center;
-    top: 20px;
+    top: 0px;
     height: auto;
     padding: 30px 10px 80px 10px;
     background-color: #fff;

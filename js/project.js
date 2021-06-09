@@ -55,7 +55,7 @@ document.addEventListener('click', function(e){
     let this_price = e.target.closest('.cartpop-item-txt').querySelector('.cost').getAttribute('data-id');
     let current_total = document.querySelector('.cartpop-total').innerText;
     let final_total = parseInt(current_total) + parseInt(this_price);
-    // let header_itemnum = parseInt(document.getElementById('cartpop-itmenum').innerText);
+    
     let totalamout = document.querySelector('.totalamout');
     let li_cart_num = document.querySelector('.li_cart_num');
     document.querySelector('.li_cart_num').innerText = parseInt(li_cart_num.innerText) + 1;
@@ -68,7 +68,6 @@ document.addEventListener('click', function(e){
     }
 
     document.querySelector('.cartpop-total').innerText = final_total;
-    // document.getElementById('cartpop-itmenum').innerText = header_itemnum + 1;
     if(totalamout){
       document.querySelector('.totalamout').innerHTML = '$' + `${final_total}`;
     }
@@ -96,7 +95,6 @@ document.addEventListener('click', function(e){
 
     if(buy_item_list.indexOf(item_name) == -1){
       window.scrollTo({top: 0, right: 0, behavior: 'smooth'});
-      // document.getElementById('cartpop-itmenum').innerText = header_itemnum + 1;
       let current_total = document.querySelector('.cartpop-total').innerText;
       // 購物車div
         let cart_div = `
@@ -396,6 +394,7 @@ function get_tasks(){
         
         document.querySelector('.totalamout-1').innerHTML = '$' + `${parseInt(current_total)+120}`;
         document.querySelector('.finalamount').innerHTML = '$' +`${parseInt(current_total)+120}`;
+        //優惠按鈕
         $('.discount_btn').on('click', function(e){
           // console.log($('.cart2-discount-num'))
           if($('.cart2-discount-num').length==0){
@@ -408,18 +407,64 @@ function get_tasks(){
             `;
             cart2_shipping_num.insertAdjacentHTML('afterend', text);
             document.querySelector('.finalamount').innerHTML = '$' +`${parseInt(current_total)+120-parseInt(current_total)*0.1}`;
+            e.preventDefault();
+            
+            //新增localstorage
+            let discount_price = `${parseInt(current_total)*0.1}`;
+            let discount_code = document.querySelector('.disc_inp').value;
+            let discount_num = {
+              'discount_price' : discount_price,
+              'discount_code' : discount_code,              
+            };
+            
+            let discount = JSON.parse(localStorage.getItem('discount'));
+            if(!discount){
+              discount = [discount_num];
+            }
+            localStorage.setItem('discount', JSON.stringify(discount));
+            
+            e.preventDefault();
+            
           }
         });
-        //discount移除
+        
       };
+      //discount移除
       document.addEventListener('click', function(e){
         if(e.target.classList.contains('cart2-removedisc')){
           $('.cart2-discount-num').remove();
           document.querySelector('.finalamount').innerHTML = '$' +`${parseInt(current_total)+120}`;
           e.preventDefault();
+          let discount = JSON.parse(localStorage.getItem('discount'));
+          window.localStorage.removeItem('discount');
+          console.elog
         }
-      })
+      });
+
+      //discount存在的話換頁給值
+      let discount = JSON.parse(localStorage.getItem('discount'));
+      if(discount){        
+        let cart2_shipping_num = document.getElementsByClassName('cart2-shipping-num')[0];
+        let text = '';
+        let value = '';
+        discount.forEach((item, i) =>{
+          text +=`<div class ='cart2-discount-num'>
+          <h4>DISCOUNT</h4>
+          <p> -$${item.discount_price}</p>
+          <a href="#"  class='cart2-removedisc'>Remove Discount</a>
+        </div>
+        `;
+          value += item.discount_code;
+        })
+          console.log(text);
+          console.log(value);
+          cart2_shipping_num.insertAdjacentHTML('afterend', text);
+          document.querySelector('.disc_inp').value = value;
+
+      }
     };
+
+    
 
   }
 }

@@ -53,6 +53,25 @@
   font-size: 16px;
   transition: .3s;
 }
+
+.menu-ul .li_cart{
+  position: relative;
+}
+
+.menu-ul .li_cart .li_cart_num{
+  position: absolute;
+  border: 1.5px solid #fa9800;
+  background-color: #fa9800;
+  color: #fff;
+  border-radius: 50%;
+  top: -50%;
+  right: -50%;
+  width: 26px;
+  height: 26px;
+  text-align: center;
+  display: none;
+}
+
 .menu-ul li a, .menu-ul li i{
   color: #ccc;
   text-decoration: none;
@@ -65,7 +84,7 @@
   text-decoration: none;
 }
 .menu .menu-content a img{
-  margin:0 0 0 50px;
+  margin:0 0 0 40px;
   width: 7vw;
   height: 7vw;
   min-width: 60px;
@@ -144,7 +163,7 @@
 .freeze{
   height: 100vh;
   width: 100vw;
-  overflow-y: hidden !important;
+  overflow: hidden !important;
 }
 
 .showli{

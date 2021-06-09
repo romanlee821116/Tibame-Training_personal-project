@@ -43,7 +43,7 @@ body{
 .artist-list{
   padding: 5px 50px;
   position: absolute;
-  top: 430px;
+  top: 400px;
   left: 0;
   z-index: 500;
 }
