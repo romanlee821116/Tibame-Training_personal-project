@@ -183,6 +183,24 @@
   transition: .3s;
 }
 
+.menu-ul .li_cart{
+  position: relative;
+}
+
+.menu-ul .li_cart .li_cart_num{
+  position: absolute;
+  border: 1.5px solid #fa9800;
+  background-color: #fa9800;
+  color: #fff;
+  border-radius: 50%;
+  top: -50%;
+  right: -50%;
+  width: 26px;
+  height: 26px;
+  text-align: center;
+  display: none;
+}
+
 .menu-ul li a.menutitle{
   display: none;
 }

@@ -14,11 +14,13 @@ document.addEventListener('click', function(e){
     let final_total = parseInt(current_total) - parseInt(this_price);
     // let header_itemnum = parseInt(document.getElementById('cartpop-itmenum').innerText);
     let totalamout = document.querySelector('.totalamout');
-    console.log(totalamout.innerHTML)
+    let li_cart_num = document.querySelector('.li_cart_num');
+    // console.log(totalamout.innerHTML)
 
     if(parseInt(span.innerText)>1){  //若產品數量大於一
       span.innerText = parseInt(span.innerText) - 1;
       document.querySelector('.cartpop-total').innerText = final_total;  //購物車總金額更新
+      document.querySelector('.li_cart_num').innerText = parseInt(li_cart_num.innerText) - 1;
       // document.getElementById('cartpop-itmenum').innerText = header_itemnum -1;
       let span_total = document.getElementsByClassName('buynum');
       for(let i = 0 ; i<span_total.length; i++){
@@ -55,8 +57,8 @@ document.addEventListener('click', function(e){
     let final_total = parseInt(current_total) + parseInt(this_price);
     // let header_itemnum = parseInt(document.getElementById('cartpop-itmenum').innerText);
     let totalamout = document.querySelector('.totalamout');
-    // console.log('current'+current_total);
-    // console.log('final='+final_total);
+    let li_cart_num = document.querySelector('.li_cart_num');
+    document.querySelector('.li_cart_num').innerText = parseInt(li_cart_num.innerText) + 1;
     span.innerText = parseInt(span.innerText) + 1;
     let span_total = document.getElementsByClassName('buynum');
     for(let i = 0 ; i<span_total.length; i++){    //更新產品數量
@@ -139,6 +141,13 @@ document.addEventListener('click', function(e){
           tasks = [task];
         }
         localStorage.setItem('tasks', JSON.stringify(tasks));
+        //關掉產品詳細視窗
+        $('.product-details').addClass('hide');
+        $('.pressbanner').css({'display':'none'});
+        $('div.cartpop').addClass('cartpopshow');
+        $('i.fa-shopping-cart').addClass('popcartbtn-clicked');
+        e.preventDefault();
+
     }else{
       window.alert('This item is already in shopping cart');
     }
@@ -161,6 +170,7 @@ document.addEventListener('click', function(e){
     // let header_itemnum = parseInt(document.getElementById('cartpop-itmenum').innerText);
     let totalamout = document.querySelector('.totalamout');
     let deletitem = document.querySelectorAll('.cartpop-item');
+    let li_cart_num = document.querySelector('.li_cart_num');
     
     // 開始做事
     if(confirm('Sure to delete this item?') == true){
@@ -189,7 +199,10 @@ document.addEventListener('click', function(e){
         }
       });
       localStorage.setItem('tasks', JSON.stringify(update_tasks));
-
+      document.querySelector('.li_cart_num').innerText = parseInt(li_cart_num.innerText)-parseInt(span);
+      if(document.querySelector('.li_cart_num').innerText=='0'){
+        document.querySelector('.li_cart_num').style.display = 'none';
+      }
     };
   }
 })
@@ -206,6 +219,7 @@ $('i.fa-cart-plus').click(function(e){
   // let header_itemnum = parseInt(document.getElementById('cartpop-itmenum').innerText);
   let item_num = 1;
   let tasks = JSON.parse(localStorage.getItem('tasks'));
+  let li_cart_num = document.querySelector('.li_cart_num');
   
     if(buy_item_list.indexOf(item_name) == -1){
       window.scrollTo({top: 0, right: 0, behavior: 'smooth'});
@@ -236,7 +250,7 @@ $('i.fa-cart-plus').click(function(e){
         cartpop_itemlist.insertAdjacentHTML('afterbegin', cart_div);
         buy_item_list.push(item_name);
         let final_total =  parseInt(current_total) + parseInt(item_value);
-        console.log(final_total);
+        // console.log(final_total);
         //更新總金額
         document.querySelector('.cartpop-total').innerText = final_total
       // 儲存至localstorage
@@ -254,6 +268,8 @@ $('i.fa-cart-plus').click(function(e){
           tasks = [task];
         }
         localStorage.setItem('tasks', JSON.stringify(tasks));
+        document.querySelector('.li_cart_num').innerText =  parseInt(li_cart_num.innerText)+1;
+        document.querySelector('.li_cart_num').style.display = 'block';
     }else{
       window.alert('This item is already in shopping cart');
     }
@@ -272,6 +288,7 @@ $('#lego_add_cart').click(function(e){
   let item_img = '../pic/completelego.jpg';
   // let header_itemnum = parseInt(document.getElementById('cartpop-itmenum').innerText);
   let item_num = 1;
+  let li_cart_num = document.querySelector('.li_cart_num');
 
     if(buy_item_list.indexOf(item_name) == -1){
       legonum +=1;
@@ -321,6 +338,8 @@ $('#lego_add_cart').click(function(e){
           tasks = [task];
         }
         localStorage.setItem('tasks', JSON.stringify(tasks));
+        document.querySelector('.li_cart_num').innerText =  parseInt(li_cart_num.innerText)+1;
+        document.querySelector('.li_cart_num').style.display = 'block';
     }else{
       window.alert('This item is already in shopping cart');
     }
@@ -331,10 +350,12 @@ function get_tasks(){
   let cartpop_itemlist = document.getElementById('cartpop-itemlist');
   let cart_productinfo = document.getElementById('cart-productinfo');
   let current_total = 0;
+  let current_item_num = 0;
   if(tasks){
     let list_content = '';
     tasks.forEach((item, i) => {
       current_total += parseInt(item.item_total);
+      current_item_num += parseInt(item.item_num);
       list_content +=`
       <div class="cartpop-item">
         <div class="cartpop-item-pic">
@@ -359,6 +380,7 @@ function get_tasks(){
 
     document.querySelector('.cartpop-total').innerHTML = current_total;
     cartpop_itemlist.innerHTML = list_content;
+    document.querySelector('.li_cart_num').innerText =  current_item_num;
 
     if(cart_productinfo){
       console.log('in product page now');
