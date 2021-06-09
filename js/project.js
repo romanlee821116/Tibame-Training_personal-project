@@ -495,7 +495,6 @@ document.addEventListener('click', function(e){
   let count = 0;
   if(e.target.classList.contains('cart2-continue')){
     let input_text = document.querySelectorAll("input[type=text]"); 
-    let input_radio = document.querySelectorAll("input[type=radio]"); 
     console.log($('.cart2-left input[type=text]').length);
     $('.cart2-left input[type=text]').each(function(){
       let value = $(this).val();
@@ -504,7 +503,7 @@ document.addEventListener('click', function(e){
       }
     })
     //
-    if(count==6){
+    if(count==$('.cart2-left input[type=text]').length){
       window.location.href = "../cart3/cart3.html";
     }else{
       window.alert('Please complete all required fields');
@@ -519,7 +518,7 @@ document.addEventListener('click', function(e){
   };  
 })
 
-//
+//漢堡凍結背景
 document.addEventListener('click', function(e){
   if(e.target.classList.contains('menu-span')){
     // console.log('fre')
@@ -529,18 +528,64 @@ document.addEventListener('click', function(e){
 })
 
 
-$('.menu-span').click(function(){
-  if(!$('#check').prop('checked')){    
-    for(let i =0; i<8; i++){
-      let a = document.querySelectorAll('.menuhamburger_li');
-      let temp = i;
-      setTimeout(function(){
-        console.log('run');
-        // $('.menuhamburger_li:nth-child('+temp+')').css({'opacity':'1'})
-        $('.menuhamburger_li:nth-child('+temp+')').addClass('showli')
-      }, 200*(i+1));
-    }
-  }else{
-      // $('.menuhamburger_li').css({'opacity':'0'});    
+// $('.menu-span').click(function(){
+//   if(!$('#check').prop('checked')){    
+//     for(let i =0; i<8; i++){
+//       let a = document.querySelectorAll('.menuhamburger_li');
+//       let temp = i;
+//       setTimeout(function(){
+//         console.log('run');
+//         $('.menuhamburger_li:nth-child('+temp+')').css({'opacity':'1'})
+//         $('.menuhamburger_li:nth-child('+temp+')').addClass('showli')
+//       }, 200*(i+1));
+//     }
+//   }else{
+//       $('.menuhamburger_li').css({'opacity':'0'});    
+//   }
+// })
+
+//delivery method
+document.addEventListener('click', function(e){
+  if(e.target.classList.contains('pickupbtn')){
+    // $('.cart2-shippingaddress').css({'display':'none'});
+    // $('.cart2-Company').css({'display':'none'});
+    // $('.cart2-address').css({'display':'none'});
+    // $('.cart2-phone').css({'display':'none'});
+    $('.cart2-shippingaddress').remove();
+    $('.cart2-Company').remove();
+    $('.cart2-address').remove();
+    $('.cart2-phone').remove();
+  }
+})
+
+document.addEventListener('click', function(e){
+  if(e.target.classList.contains('shipbtn')){    
+    // $('.cart2-shippingaddress').css({'display':'block'});
+    // $('.cart2-Company').css({'display':'block'});
+    // $('.cart2-address').css({'display':'block'});
+    // $('.cart2-phone').css({'display':'block'});
+
+    let text=`
+    <div class="cart2-shippingaddress">
+            <h3>SHIPPING ADDRESS</h3>
+            <div class="cart2-shippingaddress-input">
+              <input type="text" name="" value="" placeholder="First Name">
+              <input type="text" name="" value="" placeholder="Last Name">
+            </div>
+          </div>
+
+          <div class="cart2-Company">
+            <input type="text" name="" value="" placeholder="Company(Optional)">
+          </div>
+
+          <div class="cart2-address">
+            <input type="text" name="" value="" placeholder="Address">
+          </div>
+
+          <div class="cart2-phone">
+            <input type="text" name="" value="" placeholder="Phone">
+          </div>`
+    let cart2_deliverymethod = document.getElementById('delivery');
+    cart2_deliverymethod.insertAdjacentHTML('afterend', text);
   }
 })

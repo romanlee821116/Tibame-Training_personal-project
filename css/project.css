@@ -307,7 +307,7 @@
     right: 50%;
     bottom: -5px;
     height: 0;
-    border-bottom: 1px solid #fa9800;
+    border-bottom: 2px solid #fa9800;
     transition: .3s;
     }
 
@@ -988,7 +988,7 @@
     left: 14vw; */
     top: 50%;
     left: 0;
-    transform: translate(-100%, -50%);
+    transform: translate(-170%, -50%);
     background-color: #fff;
     border: 1px solid #ccc;
     color: #333333;
@@ -1531,7 +1531,7 @@
       width: 100vw;
       position: relative;
       font-size: 10px;
-      background-color: #fa0;
+      /* background-color: #fa0; */
       overflow-x: hidden;
       overflow-y: scroll;
 
@@ -1735,6 +1735,7 @@
 
     .menulist #check:checked ~.menulist-img{
       display: block;
+      opacity: .5;
     }
 
     .menulist-img{
@@ -2216,7 +2217,7 @@
       position: relative;
       width: 100%;
       padding-top: 0px;
-      height: 90vh;
+      height: 70vh;
       overflow: hidden;
       background-color: #f5ca02;
       background-image: url('../html/pic/lego_bg-1.png');
