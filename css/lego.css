@@ -376,8 +376,8 @@ button{
   }
 
   .lego-container-left-btn button:hover{
-    background-color: #333333;
-    color: #fa9800;
+    background-color: #fff;
+    color: #333333;
   }
   /* lego-rightboard=========================== */
   .lego-container-right{
