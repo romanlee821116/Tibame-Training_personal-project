@@ -594,7 +594,6 @@ document.addEventListener('click', function(e){
 //漢堡凍結背景
 document.addEventListener('click', function(e){
   if(e.target.classList.contains('menu-span')){
-    console.log('freeze')
     $('div.wrap').toggleClass('freeze');
     $('body').toggleClass('freeze');
     $('#section07').toggleClass('show');
@@ -691,4 +690,3 @@ document.addEventListener('click', function(e){
   }
 })
 
-//付款完成
