@@ -184,6 +184,10 @@ z-index: 99;
   display: none;
 }
 
+.cart3-billing-dif-info div{
+  margin-bottom: 10px;
+}
+
 .cart3-billing-dif input[type='radio']:checked ~ div{
   display: block;
 }

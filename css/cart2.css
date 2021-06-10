@@ -152,6 +152,7 @@ i.checked{
 .cart2-contactinfo h3{
   display: inline-block;
   margin-right: 25px;
+  margin-bottom: 5px;
 }
 
 .cart2-contactinfo a{
@@ -195,10 +196,11 @@ i.checked{
 .cart2-shippingaddress-input{
   display: flex;
   justify-content: space-between;
+  margin-top: 5px;
 }
 
 .cart2-shippingaddress input[type='text']{
-  width:45%;
+  width:49.5%;
 }
 
 .cart2-btn{
@@ -212,13 +214,14 @@ i.checked{
   border: 1px solid #ccc;
   color: #333333;
   /* width: 120px; */
-  padding: 10px 15px;
+  padding: 5px 10px ;
   cursor: pointer;
   font-weight: bold;
   margin-right: 40px;
   transition: .3s;
   display: inline-block;
   text-align: center;
+  height: 35px;
 }
 
 .cart2-btn a:hover{
