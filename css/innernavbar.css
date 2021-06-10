@@ -63,6 +63,10 @@
   transition: .3s;
 }
 
+.menu-ul li:hover{
+  transform:translateY(-5px);
+}
+
 .menu-ul .li_cart{
   position: relative;
 }

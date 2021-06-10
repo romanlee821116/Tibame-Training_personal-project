@@ -324,16 +324,17 @@
     margin-left: 2vw;
   }
 
-  .menutitle:after{
+  /*從中間開始，故位置是50%*/
+  /* .menutitle:after{
     content:'';
     position: absolute;
-    left: 50%;  /*從中間開始，故位置是50%*/
+    left: 50%;  
     right: 50%;
     bottom: -5px;
     height: 0;
     border-bottom: 2px solid #fa9800;
     transition: .3s;
-    }
+    } */
 
   .menutitle:hover:after{
     left: 0;
