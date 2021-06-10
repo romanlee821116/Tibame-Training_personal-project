@@ -188,6 +188,11 @@ z-index: 99;
   margin-bottom: 10px;
 }
 
+.cart2-shippingaddress{
+  display: flex;
+  justify-content: space-between;
+}
+
 .cart3-billing-dif input[type='radio']:checked ~ div{
   display: block;
 }
