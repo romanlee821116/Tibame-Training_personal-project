@@ -690,3 +690,5 @@ document.addEventListener('click', function(e){
     e.preventDefault();
   }
 })
+
+//付款完成

@@ -27,6 +27,7 @@
            $('.cart3-orderconfirm').css({'display':'block'});
            $('.bgblock').css({'display':'block'});
            $('html, body').scrollTop(0);
+           localStorage.clear();
          }else{
            window.alert('Please complete all required fields');
            $('.cart3-payment-credit input').each(function(){

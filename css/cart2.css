@@ -222,6 +222,7 @@ i.checked{
   display: inline-block;
   text-align: center;
   height: 35px;
+  line-height: 23px;
 }
 
 .cart2-btn a:hover{
