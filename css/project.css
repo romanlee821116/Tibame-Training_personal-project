@@ -1629,12 +1629,12 @@
     .menulist span::before{
       content: '';
       position: fixed;
-      width: 18px;
+      width: 25px;
       height: 25px;
-      border-bottom: 3px solid #fff;
+      border-bottom: 3px solid #ccc;
       /* margin-top: -16px !important;
       margin-left: 5px; */
-      top: -8px; 
+      top: 0px; 
       right: 30px;
       z-index: 999;
       cursor: pointer;
@@ -1644,12 +1644,10 @@
     .menulist span::after{
       content: '';
       position: fixed;
-      width: 18px;
+      width: 25px;
       height: 25px;
-      border-bottom: 3px solid #fff;
-      /* margin-top: -10px !important;
-      margin-left: 5px; */
-      top: 0px;
+      border-bottom: 3px solid #ccc;
+      top: 8px;
       right: 30px;      
       z-index: 999;
       cursor: pointer;
@@ -1728,11 +1726,9 @@
 
     .menulist #check:checked + label span::before{
       transform: rotate(-45deg);
-      /* margin-top: -10px !important;
-      margin-left: -3.5px; */
-      border-bottom: 3px solid #fff;
+      border-bottom: 3px solid #ccc;
       right: 38px;
-      top: 0px;
+      top: 8px;
       z-index: 999;
     }
 
@@ -1741,8 +1737,8 @@
       /* margin-top: -10px;
       margin-left: 15px; */
       right: 20px;
-      top: 0px;
-      border-bottom: 3px solid #fff;
+      top: 8px;
+      border-bottom: 3px solid #ccc;
       z-index: 999;
     }
 
@@ -1836,23 +1832,24 @@
       align-items: center;
       background-color: #171717;
       z-index: 99;
-      height: 50px;
+      height: 60px;
     }
 
     .navbar ul{
       margin-left: 0;
       position: absolute;
       right: 70px;
-      top: 6px;
+      top: 15px;
     }
 
     .navbar li{
       display: inline-block;
       padding:  2px 5px;
-      margin-right: 20px;
+      margin-right: 15px;
       font-size: 16px;
       transition: .3s;
     }
+
     div.navbar-logo{
       /* width: 8vw;
       height: 8vw; */
@@ -1872,9 +1869,10 @@
     }
 
     .navbar .menu-content a, .navbar .menu-content i{
-      color: #fff;
+      color: #ccc;
       position: relative;
       display: inline-block;
+      font-size: 16px;
     }
 
     .navbar .menu-content a.menutitle{
