@@ -19,7 +19,7 @@ body{
 
 .wrap{
   width: 100%;
-  max-width: 1400px;
+  /* max-width: 1400px; */
   margin: 0 auto;
   position: relative;
   background-color: rgba(0,0,0,.1);

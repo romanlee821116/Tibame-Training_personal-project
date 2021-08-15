@@ -208,20 +208,18 @@ document.addEventListener('click', function(e){
 // 購物車新增================================================================
 
 $('i.fa-cart-plus').click(function(e){
-  $('div.cartpop').addClass('cartpopshow');
-  $('i.fa-shopping-cart').addClass('popcartbtn-clicked');
+  $('div.cartpop').addClass('cartpopshow'); //購物車出現
+  $('i.fa-shopping-cart').addClass('popcartbtn-clicked'); //購物車鈕出現新增產品的樣式
 
-  let item_name = e.target.nextElementSibling.innerHTML;
-  let item_value = e.target.closest('.p1').getAttribute('data-id');
+  let item_name = e.target.nextElementSibling.innerHTML; //取得此產品名稱
+  let item_value = e.target.closest('.p1').getAttribute('data-id'); //取得此產品金額
   let item_img = e.target.closest('.p1').querySelector('img').getAttribute('src');
-  // let header_itemnum = parseInt(document.getElementById('cartpop-itmenum').innerText);
   let item_num = 1;
   let tasks = JSON.parse(localStorage.getItem('tasks'));
   let li_cart_num = document.querySelector('.li_cart_num');
   
     if(buy_item_list.indexOf(item_name) == -1){
       window.scrollTo({top: 0, right: 0, behavior: 'smooth'});
-      // document.getElementById('cartpop-itmenum').innerText = header_itemnum + 1;
       let current_total = document.querySelector('.cartpop-total').innerText;
       // 購物車div
         let cart_div = `

@@ -13,10 +13,12 @@
 
 body{
   background-color: #000;
+  /* height: 100vh; */
 }
 
 .wrap{
   width: 100%;
+  min-height: 100vh;
   margin: 0 auto;
   background-color: #fff;
   background-size: contain;
@@ -32,8 +34,8 @@ body{
   display: flex;
   padding: 50px;
   width: 75%;
+  height: 100vh;
   max-width: 900px;
-  height: auto;
   min-height: 768px;
   background-color: rgba(255,255,255,.5);
   margin: 0 auto;
